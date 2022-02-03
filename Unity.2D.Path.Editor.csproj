@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8924CC56-F93A-C5F7-E7F0-3E82BF832D89}</ProjectGuid>
+    <ProjectGuid>{7D11C08C-2DD3-2026-292F-92520598B315}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Path.Editor</AssemblyName>
@@ -805,11 +805,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

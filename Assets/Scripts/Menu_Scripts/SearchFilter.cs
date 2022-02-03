@@ -6,14 +6,35 @@ using System;
 
 public class SearchFilter
 {
-   public static IEnumerable FilterCollection(string filter, IEnumerable completeCollection)
+   public static List<IFiltrable> FilterCollection(string filter, List<IFiltrable> completeCollection)
     {
-        List<string> aux = new List<string>();
+        List<IFiltrable> findList = new List<IFiltrable>();
         if(string.IsNullOrWhiteSpace(filter) || string.IsNullOrEmpty(filter))
         {
-
+            foreach (var item in completeCollection)
+            {
+                item.SetShowObject(true);
+            }
+            return completeCollection;
+        }else
+        {
+            foreach (var item in completeCollection)
+            {
+                if(item.GetCodeName().ToLower().Contains(filter.ToLower()))
+                {
+                    item.SetShowObject(true);
+                    findList.Add(item);
+                }else
+                {
+                    item.SetShowObject(false);
+                }
+            }
         }
-        IEnumerable collection = aux;
-        return aux;
+        return findList;
     }
+}
+public interface IFiltrable
+{
+    public string GetCodeName();
+    public void SetShowObject(bool b);
 }

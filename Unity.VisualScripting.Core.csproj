@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E29A02F5-8E45-F982-5C91-3489A5997A0B}</ProjectGuid>
+    <ProjectGuid>{7B09F1D7-C31B-3667-7022-C4A3B50EE877}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Core</AssemblyName>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4293BFF7-84B8-8862-2FC7-67C210D13C20}</ProjectGuid>
+    <ProjectGuid>{B8E6214F-2B88-7393-FC9E-13A38EC55F9C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras</AssemblyName>

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 4284715652163238526}
   par: {fileID: 1786530043626942997}
+  price: 1
   cardInfo:
     title: {fileID: 6037020901273570772}
     description: {fileID: 7157917717595473939}
@@ -5679,13 +5680,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

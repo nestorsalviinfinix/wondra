@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1BAC57AC-4855-3769-5E45-9E1C37F4280E}</ProjectGuid>
+    <ProjectGuid>{89006B70-FF43-CD31-2425-C54A206FD2C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Burst</AssemblyName>

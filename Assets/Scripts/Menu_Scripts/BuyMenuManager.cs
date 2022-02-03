@@ -20,7 +20,6 @@ public class BuyMenuManager : MonoBehaviour
     public TextMeshProUGUI myMoneyText;
     public TMP_InputField searchCard;
     public Toggle ownerCard;
-    private List<OwnerCard> _allCards = new List<OwnerCard>();
 
     void Start()
     {
@@ -55,10 +54,6 @@ public class BuyMenuManager : MonoBehaviour
             fatherCardMenu.offsetMax = new Vector2(0, +48.45f + (+346.06f * y));
             fatherCardMenu.localPosition = Vector3.zero;
         }
-        foreach (var c in _cardsInventory)
-        {
-            _allCards.Add(c);
-        }
         ownerCard.onValueChanged.AddListener(delegate { ChangeOwnerCard(ownerCard.isOn); });
     }
     private CardData RandomTest()
@@ -69,64 +64,50 @@ public class BuyMenuManager : MonoBehaviour
     }
     public void ChangeOwnerCard(bool b)
     {
-        if(b)
+        if(!b)
         {
-            _cardsInventory.Clear();
-            foreach (var a in _allCards)
+            foreach (var card in _cardsInventory)
             {
-                _cardsInventory.Add(a);
+                card.gameObject.SetActive(false);
             }
-            foreach (var c in _cardsInventory)
+            string[] owners = TransportData.GetCardsDataBase().Select(x => x.data.title).ToArray();
+            var lazzy = _cardsInventory.Where(x =>
             {
-                c.gameObject.SetActive(true);
-            }
-            searchCard.text = "";
-        }
-        else
-        {
-            searchCard.text = "";
-            Sprite[] owner = TransportData.GetCardsDataBase().Select(x=>x.data.artwork).ToArray();
-            List<OwnerCard> removeList = new List<OwnerCard>();
-            foreach (var c in _cardsInventory)
-            {
-                foreach (var o in owner)
+                foreach (var o in owners)
                 {
-                    if(c.cardInfo.artwork.sprite == o)
+                    if (o.ToLower() == x.cardInfo.title.text.ToLower())
                     {
-                        c.gameObject.SetActive(false);
-                        removeList.Add(c);
+                        x.gameObject.SetActive(true);
+                        return true;
                     }
                 }
-            }
-            foreach (var r in removeList)
+                x.gameObject.SetActive(false);
+                return false;
+            })
+                .Select(x => x.GetComponent<IFiltrable>())
+                ;
+            foreach (var item in SearchFilter.FilterCollection(searchCard.text,lazzy.ToList()))
             {
-                _cardsInventory.Remove(r);
+                item.SetShowObject(true);
             }
+        }else
+        {
+            SearchFilter.FilterCollection(searchCard.text,
+                                      _cardsInventory
+                                          .Select(x => x.GetComponent<IFiltrable>())
+                                          .ToList()
+                                      );
         }
     }
     public void SearchCard()
     {
         int maxCount = 0;
-        if(string.IsNullOrWhiteSpace(searchCard.text))
-        {
-            ChangeOwnerCard(ownerCard.isOn);
-            maxCount = _cardsInventory.Count(x => x.gameObject.activeSelf);
-        }else
-        {
-            List<OwnerCard> _activeCards = new List<OwnerCard>();
-            _activeCards = _cardsInventory.Where(x => x.gameObject.activeSelf).ToList();
-
-            foreach (var c in _activeCards)
-            {
-                if (c.cardInfo.title.text.ToLower().Contains(searchCard.text.ToLower()))
-                {
-                    c.gameObject.SetActive(true);
-                    maxCount++;
-                }
-                else
-                    c.gameObject.SetActive(false);
-            }
-        }
+        ChangeOwnerCard(ownerCard.isOn);
+        //SearchFilter.FilterCollection(  searchCard.text, 
+        //                                _cardsInventory
+        //                                    .Select(x=>x.GetComponent<IFiltrable>())
+        //                                    .ToList()
+        //                                );
         float x = (float)maxCount / 6f;
 
         int y = Mathf.CeilToInt(x);
@@ -158,7 +139,6 @@ public class BuyMenuManager : MonoBehaviour
 
         moneyParticles.Play();
         _cardsInventory.Remove(cardSelection);
-        _allCards.Remove(cardSelection);
         TransportData.myMoney -= cardSelection.price;
         myMoneyText.text = "" + TransportData.myMoney;
         TransportData.AddCardInDatabase(cardSelection.cardInfo.title.text, cardSelection.GetCardData());
