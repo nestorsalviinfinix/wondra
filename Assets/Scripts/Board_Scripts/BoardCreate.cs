@@ -5,15 +5,15 @@ using UnityEngine;
 public class BoardCreate : MonoBehaviour
 {
     public BoardNode modelNode;
-    public int high = 4, width= 4;
+    public int height = 4, width= 4;
     public Color blackColor;
 
     public Transform rightUp, rightDown, leftUp, leftDown;
 
     void Start()
     {
-        if (high < 4)
-            high = 4;
+        if (height < 4)
+            height = 4;
         if (width < 4)
             width = 4;
 
@@ -21,10 +21,10 @@ public class BoardCreate : MonoBehaviour
     }
     private void Create()
     {
-        float Ymove = (rightUp.position.y - rightDown.position.y) / (high-1);
+        float Ymove = (rightUp.position.y - rightDown.position.y) / (height-1);
         float Xmove = (rightDown.position.x - leftDown.position.x) / (width-1);
 
-        for (int i = 0; i < high; i++)
+        for (int i = 0; i < height; i++)
         {
             for (int j = 0; j < width; j++)
             {

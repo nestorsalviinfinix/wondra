@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BoardNode : MonoBehaviour
 {
-    private SpriteRenderer _renderer;
+    private SpriteRenderer _spriteRenderer;
     public void SetColorGround(Color c)
     {
-        _renderer = GetComponent<SpriteRenderer>();
-        _renderer.color = c;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.color = c;
     }
     void Start()
     {
