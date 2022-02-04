@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\IKEditorManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\IKGizmos.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\Solver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\IKManager2DEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\LimbSolver2DEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\FabrikSolver2DEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\IKEditorManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.animation@7.0.2\IK\Editor\Unity.2D.IK.Editor.asmdef" />

@@ -5,10 +5,11 @@ using UnityEngine;
 public class IdleWaitExecute : StateMachineBehaviour
 {
     private float time = 0;
+    public Vector2 cooldown = new Vector2(3f,10f);
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        time = Random.Range(3f, 10f);
+        time = Random.Range(cooldown.x, cooldown.y);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -17,7 +18,7 @@ public class IdleWaitExecute : StateMachineBehaviour
         time -= Time.deltaTime;
         if(time <= 0)
         {
-            time = Random.Range(3f, 10f);
+            time = Random.Range(cooldown.x, cooldown.y);
             animator.SetTrigger("wait");
         }
     }

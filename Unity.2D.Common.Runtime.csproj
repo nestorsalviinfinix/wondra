@@ -56,13 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Refinery.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Smoothen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Tessellator.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\UTess.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\ArraySlice.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Refinery.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\PlanarGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Smoothen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\UTess2D\Tessellator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.common@6.0.1\Runtime\Unity.2D.Common.Runtime.asmdef" />

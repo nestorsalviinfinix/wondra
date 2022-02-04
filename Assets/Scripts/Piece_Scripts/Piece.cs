@@ -11,6 +11,8 @@ public class Piece : MonoBehaviour
     public PieceType pieceType;
     public BoardNode currentNode;
 
+    private Animator _anim;
+
     private Vector2 initialPosition;
     //public GameObject moveLeft;
     //public GameObject moveRight;
@@ -20,8 +22,10 @@ public class Piece : MonoBehaviour
         var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c => c != GetComponent<Collider2D>())
                         .Where(b => b.GetComponent<BoardNode>())
+                        .OrderBy(b => Vector2.Distance(transform.position, b.transform.position))
                         .ToArray();
         currentNode = cols[0].GetComponent<BoardNode>();
+        transform.position = currentNode.transform.position;
 
         gameObject.name += "-" + pieceType.ToString();
 
@@ -29,6 +33,30 @@ public class Piece : MonoBehaviour
         isDragging = false;
         //moveLeft.SetActive(false);
         //moveRight.SetActive(false);
+
+        _anim = gameObject.AddComponent<Animator>();
+        _anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Animation/PiecesAnims/" + dirForPiece());
+    }
+
+    private string dirForPiece()
+    {
+        switch (pieceType)
+        {
+            case PieceType.PAWN:
+                return team == "black"? "BoardPawnBlack" : "BoardPiece";
+            case PieceType.BISHOP:
+                return team == "black" ? "BoardBishopBlack" : "BoardBishop";
+            case PieceType.KING:
+                return team == "black" ? "BoardKingBlack" : "BoardKing";
+            case PieceType.QUEEN:
+                return team == "black" ? "BoardQueenBlack" : "BoardQueen";
+            case PieceType.TOWER:
+                return team == "black" ? "BoardTowerBlack" : "BoardTower";
+            case PieceType.KNIGHT:
+                return team == "black" ? "BoardKnightBlack" : "BoardKnight";
+            default:
+                return "null";
+        }
     }
 
     void Update()
@@ -38,7 +66,7 @@ public class Piece : MonoBehaviour
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
         }
-        return;
+        //return;
         if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
@@ -73,6 +101,7 @@ public class Piece : MonoBehaviour
     public void OnMouseDown()
     {
         isDragging = true;
+        _anim.SetTrigger("select");
         //moveLeft.SetActive(true);
         //moveRight.SetActive(true);
     }

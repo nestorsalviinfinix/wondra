@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounterValue.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarkerExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCategory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker2Params.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker3Params.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker1Param.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounterValue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCategory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker2Params.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker1Param.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\Unity.Profiling.Core.asmdef" />

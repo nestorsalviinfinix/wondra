@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BoardKing
+  m_Controller: {fileID: 9100000, guid: cf4fae27fb6b02248b9dcc1882457751, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 142b378ca6183534196c619c5e595062, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8f9b52931a1c2c04db61fc3745879928, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 04a4b39e4270720438c670af8eccd327, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 869592c111d79bf498306a798eeb5528, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d6d6bd9447765e44d9b3c06f83127f18, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c171cc4973f58d44b89e90a9d397c926, type: 2}
