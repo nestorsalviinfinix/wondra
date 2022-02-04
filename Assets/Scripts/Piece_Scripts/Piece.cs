@@ -3,25 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-[RequireComponent(typeof(Collider2D))]
-public abstract class Piece : MonoBehaviour
+//[RequireComponent(typeof(Collider2D))]
+public class Piece : MonoBehaviour
 {
-    private bool _pick = false;
-    public BoardNode myNode;
+    private bool isDragging;// = false;
+    public string team;
+    public PieceType pieceType;
+    public BoardNode currentNode;
+
+    private Vector2 initialPosition;
+    //public GameObject moveLeft;
+    //public GameObject moveRight;
+
     void Start()
     {
         var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c => c != GetComponent<Collider2D>())
                         .Where(b => b.GetComponent<BoardNode>())
                         .ToArray();
-        myNode = cols[0].GetComponent<BoardNode>();
+        currentNode = cols[0].GetComponent<BoardNode>();
+
+        gameObject.name += "-" + pieceType.ToString();
+
+        initialPosition = transform.position;
+        isDragging = false;
+        //moveLeft.SetActive(false);
+        //moveRight.SetActive(false);
     }
 
     void Update()
     {
+        if (isDragging)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePosition);
+        }
+        return;
         if (Input.GetMouseButtonUp(0))
         {
-            _pick = false;
+            isDragging = false;
             var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c=> c != GetComponent<Collider2D>())
                         .Where(b => b.GetComponent<BoardNode>())
@@ -39,21 +59,28 @@ public abstract class Piece : MonoBehaviour
                         moreClose = c;
                     }
                 }
-                myNode = moreClose.GetComponent<BoardNode>();
-                transform.position = myNode.transform.position;
+                currentNode = moreClose.GetComponent<BoardNode>();
+                transform.position = currentNode.transform.position;
             }
         }
 
-        if(_pick)
+        if(isDragging)
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3( mousePos.x,mousePos.y,0);
         }
     }
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        _pick = true;
+        isDragging = true;
+        //moveLeft.SetActive(true);
+        //moveRight.SetActive(true);
     }
 
-
+    public void OnMouseUp()
+    {
+        isDragging = false;
+        //moveLeft.SetActive(false);
+        //moveRight.SetActive(false);
+    }
 }

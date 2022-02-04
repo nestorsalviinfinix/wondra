@@ -59,26 +59,28 @@
     <Compile Include="Assets\Scripts\Piece_Scripts\Piece.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\FalseScoreTest.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ButtonFeedBack.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ScrollBarForce.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\SaveLoadJsons.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\SearchFilter.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\AccountMenu.cs" />
     <Compile Include="Assets\Scripts\Card_Scripts\CardData.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\BuyMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\HistoryManager.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\TransitionScenes.cs" />
     <Compile Include="Assets\Scripts\Board_Scripts\BoardCreate.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\TransportData.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\Popups.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ZoomCard.cs" />
+    <Compile Include="Assets\Scripts\Board_Scripts\BoardNode.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\ButtonsAttention.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\ArmoryManager.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\ScrollBarForce.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\SearchFilter.cs" />
+    <Compile Include="Assets\Scripts\Piece_Scripts\PieceTypes.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\HistoryManager.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\TransportData.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\HistoryCard.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\Menus.cs" />
-    <Compile Include="Assets\Scripts\Board_Scripts\BoardNode.cs" />
     <Compile Include="Assets\Scripts\Generic_Scripts\ManualSorting.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\PawnMove.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\UserName.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ButtonsAttention.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ArmoryManager.cs" />
+    <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
     <Compile Include="Assets\Scripts\Card_Scripts\OwnerCard.cs" />
   </ItemGroup>
   <ItemGroup>

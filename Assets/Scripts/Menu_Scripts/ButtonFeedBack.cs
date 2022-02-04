@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 
 public class ButtonFeedBack : MonoBehaviour
 {
-    private bool _finishDelay = false;
     private Button _myBtn;
     private EventTrigger _myET;
     void Start()
