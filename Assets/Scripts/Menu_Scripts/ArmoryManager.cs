@@ -29,6 +29,9 @@ public class ArmoryManager : MonoBehaviour
     public RectTransform selectParticle;
     public RectTransform[] piecesPos;
     public TextMeshProUGUI myMoney;
+
+    [Header("Search")]
+    public TMP_InputField searchCard;
     private void Start()
     {
         //int countTest = Random.Range(6, 20); // TEST
@@ -164,6 +167,12 @@ public class ArmoryManager : MonoBehaviour
             }
         }
 
+    }
+    public void Search()
+    {
+        var list = _cardsInventory.Select(x => x.Value.GetComponent<IFiltrable>()).ToList();
+        if(list.Count() > 0)
+            SearchFilter.FilterCollection(searchCard.text, list);
     }
     public void SelectPiece(int index)
     {
