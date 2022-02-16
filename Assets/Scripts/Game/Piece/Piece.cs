@@ -8,7 +8,7 @@ public class Piece : MonoBehaviour
 {
     private bool isDragging;// = false;
     public string team;
-    public PieceType pieceType;
+    public EChessPieceType pieceType;
     public BoardNode currentNode;
 
     private Vector2 initialPosition;
@@ -38,7 +38,7 @@ public class Piece : MonoBehaviour
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
         }
-        return;
+        /*return;
         if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
@@ -68,7 +68,7 @@ public class Piece : MonoBehaviour
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3( mousePos.x,mousePos.y,0);
-        }
+        }*/
     }
     public void OnMouseDown()
     {

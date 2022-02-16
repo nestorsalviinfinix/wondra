@@ -1,4 +1,4 @@
-public enum PieceType
+public enum EChessPieceType
 {
     PAWN,
     BISHOP,
