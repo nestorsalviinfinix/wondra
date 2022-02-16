@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/StoreMenu.unity
     guid: 6bb8ea4496c0afc46a56ab3ce1f4ee4d
   - enabled: 1
+    path: Assets/Scenes/Menus/SellMenu.unity
+    guid: 00d3a29b9f44b5c44b6ea86599bcb4b9
+  - enabled: 1
     path: Assets/Scenes/Menus/ArmoryMenu.unity
     guid: 0f162eea14c150c46aefacd1c958f594
   - enabled: 1

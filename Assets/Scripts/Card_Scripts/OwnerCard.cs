@@ -13,6 +13,7 @@ public class OwnerCard : MonoBehaviour, IFiltrable
     public ParticleSystem par;
     public int price = 1;
     public CardInformation cardInfo;
+    public CardInStore myStoreReferent;
     public void SetCardData(CardData cd)
     {
         _cardData = cd;

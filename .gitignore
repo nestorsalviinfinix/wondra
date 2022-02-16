@@ -9,6 +9,13 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Ll]og/
+#Logs
+Log
+#ProjectSettings
+ProjectSettings
+#UserSettings
+UserSettings
 
 # Never ignore Asset meta data
 !/[Aa]ssets/*/.meta
@@ -45,6 +52,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.log
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -63,10 +71,8 @@ crashlytics-build.properties
 
 /[Aa]ssets/StreamingAssets/build_info
 /[Aa]ssets/StreamingAssets/build_info.meta
-<<<<<<< HEAD
 EditorBuildSettings.asset
 ProjectSettings.asset
-=======
 
 
 /whitaker initiative/Temp/
@@ -75,4 +81,3 @@ ProjectSettings.asset
 *.cache
 *.rar
 *.7z
->>>>>>> origin/Omar

@@ -11,6 +11,7 @@ public static class TransportData
     public static string access_token;
     private static List<CardDataBase> _cardsDataBase = new List<CardDataBase>();
     public static List<HistoryCardDataBase> historyCards = new List<HistoryCardDataBase>();
+    public static List<CardInStore> cardInStore = new List<CardInStore>();
     public static PiecesWithCard[] piecesCard = { 
                                                 new PiecesWithCard(0),
                                                 new PiecesWithCard(1),
@@ -19,8 +20,6 @@ public static class TransportData
                                                 new PiecesWithCard(4),
                                                 new PiecesWithCard(5)
                                                 };
-
-
     public static void AddCardInDatabase(string cardName, CardData cd)
     {
         if (!ExistNameInList(cardName))
@@ -59,6 +58,11 @@ public static class TransportData
     public static List<CardDataBase> GetCardsDataBase()
     {
         return _cardsDataBase;
+    }
+    public static CardDataBase GetCard(string cardName)
+    {
+        var result = _cardsDataBase.Where(x => x.title == cardName).FirstOrDefault();
+        return result;
     }
     public static bool ExistNameInList(string cardName)
     {

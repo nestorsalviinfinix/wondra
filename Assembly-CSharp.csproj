@@ -70,12 +70,15 @@
     <Compile Include="Assets\Scripts\Menu_Scripts\ZoomCard.cs" />
     <Compile Include="Assets\Scripts\Board_Scripts\BoardNode.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Card_Scripts\CardFilterMenu.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ButtonsAttention.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ArmoryManager.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ScrollBarForce.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\SearchFilter.cs" />
+    <Compile Include="Assets\Scripts\Card_Scripts\GenerateRandomName.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\PieceTypes.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\HistoryManager.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\SellMenuManager.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\TransportData.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\HistoryCard.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\Menus.cs" />
