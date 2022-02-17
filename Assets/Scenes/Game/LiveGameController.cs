@@ -6,12 +6,17 @@ public class LiveGameController : MonoBehaviour
 {
     public ChessGameController gameController;
     public LiveBoardController boardController;
+    public LivePieceController pieceController;
 
     void Start()
     {
+        // creates game
         gameController = new ChessGameController();
-        Debug.Log(boardController);
+
+        // set board data on live board
         boardController.SetData(gameController.Board);
+
+        // create live board boxes
         boardController.CreateBoxMatrix();
     }
 

@@ -6,17 +6,16 @@ using System.Linq;
 //[RequireComponent(typeof(Collider2D))]
 public class Piece : MonoBehaviour
 {
-    private bool isDragging;// = false;
-    public string team;
-    public EChessPieceType pieceType;
-    public BoardNode currentNode;
+    public EChessPieceType PieceType { get; private set; } 
+    public ChessBoardBox currentBox { get; private set; }
 
-    private Vector2 initialPosition;
     //public GameObject moveLeft;
     //public GameObject moveRight;
 
     void Start()
     {
+
+        /*
         var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c => c != GetComponent<Collider2D>())
                         .Where(b => b.GetComponent<BoardNode>())
@@ -26,18 +25,18 @@ public class Piece : MonoBehaviour
         gameObject.name += "-" + pieceType.ToString();
 
         initialPosition = transform.position;
-        isDragging = false;
+        isDragging = false;*/
         //moveLeft.SetActive(false);
         //moveRight.SetActive(false);
     }
 
     void Update()
     {
-        if (isDragging)
+        /*if (isDragging)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
-        }
+        }*/
         /*return;
         if (Input.GetMouseButtonUp(0))
         {
@@ -72,14 +71,14 @@ public class Piece : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        isDragging = true;
+        //isDragging = true;
         //moveLeft.SetActive(true);
         //moveRight.SetActive(true);
     }
 
     public void OnMouseUp()
     {
-        isDragging = false;
+        //isDragging = false;
         //moveLeft.SetActive(false);
         //moveRight.SetActive(false);
     }

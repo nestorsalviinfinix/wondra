@@ -10,11 +10,11 @@ public class ChessGameController
 
     public ChessGameController()
     {
-        Board = new ChessBoard();
-        Board.StandardFill();
-
         playerController = new ChessPlayerController();
         CreatePlayers();
+
+        Board = new ChessBoard();
+        Board.StandardFill(playerController.playerList.ToArray());
         Debug.Log("GAME CONTROLLER CREATED");
     }
     

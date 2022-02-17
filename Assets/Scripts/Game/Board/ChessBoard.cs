@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,48 +34,67 @@ public class ChessBoard
     }
 
     // method only made for debugging
-    public void StandardFill()
+    public void StandardFill(ChessPlayer[] players)
     {
-        Dictionary<int[], ChessPiece> dict = new Dictionary<int[], ChessPiece>()
+        Dictionary<int[], ChessPiece> dict = new()
         {
-            { new int[]{ 0, 0}, new ChessPiece(EChessPieceType.TOWER, EChessColor.Black)},
-            { new int[]{ 1, 0}, new ChessPiece(EChessPieceType.KNIGHT, EChessColor.Black)},
-            { new int[]{ 2, 0}, new ChessPiece(EChessPieceType.BISHOP, EChessColor.Black)},
-            { new int[]{ 3, 0}, new ChessPiece(EChessPieceType.QUEEN, EChessColor.Black)},
-            { new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, EChessColor.Black)},
-            { new int[]{ 5, 0}, new ChessPiece(EChessPieceType.BISHOP, EChessColor.Black)},
-            { new int[]{ 6, 0}, new ChessPiece(EChessPieceType.KNIGHT, EChessColor.Black)},
-            { new int[]{ 7, 0}, new ChessPiece(EChessPieceType.TOWER, EChessColor.Black)},
+            { new int[]{ 0, 0}, new ChessPiece(EChessPieceType.TOWER, players[1])},
+            { new int[]{ 1, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
+            { new int[]{ 2, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
+            { new int[]{ 3, 0}, new ChessPiece(EChessPieceType.QUEEN, players[1])},
+            { new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, players[1])},
+            { new int[]{ 5, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
+            { new int[]{ 6, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
+            { new int[]{ 7, 0}, new ChessPiece(EChessPieceType.TOWER, players[1])},
 
-            { new int[]{ 0, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 1, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 2, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 3, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 4, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 5, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 6, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
-            { new int[]{ 7, 1}, new ChessPiece(EChessPieceType.PAWN, EChessColor.Black)},
+            { new int[]{ 0, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 1, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 2, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 3, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 4, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 5, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 6, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+            { new int[]{ 7, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
 
-            { new int[]{ 0, 7}, new ChessPiece(EChessPieceType.TOWER, EChessColor.White)},
-            { new int[]{ 1, 7}, new ChessPiece(EChessPieceType.KNIGHT, EChessColor.White)},
-            { new int[]{ 2, 7}, new ChessPiece(EChessPieceType.BISHOP, EChessColor.White)},
-            { new int[]{ 3, 7}, new ChessPiece(EChessPieceType.QUEEN, EChessColor.White)},
-            { new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, EChessColor.White)},
-            { new int[]{ 5, 7}, new ChessPiece(EChessPieceType.BISHOP, EChessColor.White)},
-            { new int[]{ 6, 7}, new ChessPiece(EChessPieceType.KNIGHT, EChessColor.White)},
-            { new int[]{ 7, 7}, new ChessPiece(EChessPieceType.TOWER, EChessColor.White)},
+            { new int[]{ 0, 7}, new ChessPiece(EChessPieceType.TOWER, players[0])},
+            { new int[]{ 1, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
+            { new int[]{ 2, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
+            { new int[]{ 3, 7}, new ChessPiece(EChessPieceType.QUEEN, players[0])},
+            { new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, players[0])},
+            { new int[]{ 5, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
+            { new int[]{ 6, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
+            { new int[]{ 7, 7}, new ChessPiece(EChessPieceType.TOWER, players[0])},
 
-            { new int[]{ 0, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 1, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 2, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 3, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 4, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 5, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 6, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
-            { new int[]{ 7, 6}, new ChessPiece(EChessPieceType.PAWN, EChessColor.White)},
+            { new int[]{ 0, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 1, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 2, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 3, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 4, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 5, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 6, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+            { new int[]{ 7, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
         };
 
         Fill(dict);
+    }
+
+    public static string ToAlgebraic(Vector2 coords)
+    {
+        string ret = "";
+        ret += (char)(coords.x + 97);
+        ret += coords.y + 1;
+
+        return ret;
+    }
+
+    public static Vector2 ToVector(string algebraicCoords)
+    {
+        Vector2 ret = new Vector2();
+
+        ret.x = (int)Char.GetNumericValue(algebraicCoords[0]);
+        ret.y = algebraicCoords[1] - 1;
+
+        return ret;
     }
 
     public string ConvertToString()

@@ -29,7 +29,7 @@ public class LiveBoardController : MonoBehaviour
 
                 render.material = color == EChessColor.White ? boxesMaterials[0] : boxesMaterials[1];
 
-                box.name = $"x:{x} | y: {y} - {dataController.boxes[x, y].Color}";
+                box.name = $"{ChessBoard.ToAlgebraic(new Vector2(x, y))} - {dataController.boxes[x, y].Color}";
             }
     }
 
