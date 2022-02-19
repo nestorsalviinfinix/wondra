@@ -14,6 +14,6 @@ public class LivePieceController : MonoBehaviour
 
     public void CreatePieces()
     {
-
+        Debug.Log(data);
     }
 }

@@ -15,7 +15,6 @@ public class ChessGameController
 
         Board = new ChessBoard();
         Board.StandardFill(playerController.playerList.ToArray());
-        Debug.Log("GAME CONTROLLER CREATED");
     }
     
 
