@@ -10,8 +10,12 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Ll]og/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Pp]rojectSettings/
+
 #Logs
-Log
+Logs
 #ProjectSettings
 ProjectSettings
 #UserSettings
