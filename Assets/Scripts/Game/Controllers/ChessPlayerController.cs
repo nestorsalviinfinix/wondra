@@ -26,4 +26,10 @@ public class ChessPlayerController : IChessPlayerManager
     {
         playerList.Add(player);
     }
+
+    public void CreateTestingPlayers()
+    {
+        AddPlayer(new ChessPlayer("Diana", EChessColor.White));
+        AddPlayer(new ChessPlayer("Ronnie", EChessColor.Black));
+    }
 }

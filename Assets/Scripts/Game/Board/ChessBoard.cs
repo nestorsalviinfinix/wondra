@@ -8,9 +8,11 @@ public class ChessBoard
     public int sizeWidth = 8;
     public int sizeHeight = 8;
     public ChessBoardBox[,] boxes;
+    public List<ChessPiece> pieces;
 
     public ChessBoard()
     {
+        pieces = new List<ChessPiece>();
         boxes = new ChessBoardBox[sizeWidth, sizeHeight];
         EChessColor currentColor = EChessColor.White;
 
@@ -29,7 +31,13 @@ public class ChessBoard
     {
         foreach(KeyValuePair<int[], ChessPiece> entry in dict)
         {
-            boxes[entry.Key[0], entry.Key[1]].SetPiece(entry.Value);
+            int coordX = entry.Key[0];
+            int coordY = entry.Key[1];
+            ChessPiece piece = entry.Value;
+
+            boxes[coordX, coordY].SetPiece(piece);
+
+            if (piece != null) pieces.Add(piece);
         }
     }
 

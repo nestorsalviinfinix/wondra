@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnController : MonoBehaviour
+public class ChessTurnController
 {
     public ChessPlayerController playerManager;
 
@@ -21,7 +21,7 @@ public class TurnController : MonoBehaviour
     Dictionary<TurnPhase, ITurnPhaseStrategy> turnPhaseStrategy;
     private int currentPhaseIndex = 0;
 
-    void Start()
+    public void Init()
     {
         playerManager = new ChessPlayerController();
 

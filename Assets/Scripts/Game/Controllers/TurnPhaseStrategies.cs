@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InitialPhaseStrategy : ITurnPhaseStrategy
 {
-    public void Execute(TurnController turnManager)
+    public void Execute(ChessTurnController turnManager)
     {
         // run Initial stuff
         Debug.Log("START / END initial phase");
@@ -15,7 +15,7 @@ public class InitialPhaseStrategy : ITurnPhaseStrategy
 
 public class PlanningPhaseStrategy : ITurnPhaseStrategy
 {
-    public void Execute(TurnController turnManager)
+    public void Execute(ChessTurnController turnManager)
     {
         // run planning stuff
 
@@ -29,7 +29,7 @@ public class PlanningPhaseStrategy : ITurnPhaseStrategy
 
 public class MainPhaseStrategy : ITurnPhaseStrategy
 {
-    public void Execute(TurnController turnManager)
+    public void Execute(ChessTurnController turnManager)
     {
         // UI stuff
         Debug.LogWarning("WAITING FOR MOVEMENT");
@@ -38,7 +38,7 @@ public class MainPhaseStrategy : ITurnPhaseStrategy
 
 public class EndPhaseStrategy : ITurnPhaseStrategy
 {
-    public void Execute(TurnController turnManager)
+    public void Execute(ChessTurnController turnManager)
     {
         // after battle stuff
         Debug.Log("End phase ended");

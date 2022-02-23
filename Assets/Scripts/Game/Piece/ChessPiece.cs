@@ -7,6 +7,7 @@ public class ChessPiece
     public ChessPlayer Owner { get; private set; }
     public EChessColor Color { get; private set; }
     public EChessPieceType Type { get; private set; }
+    public ChessBoardBox Box { get; set; }
 
     public int coordX;
     public int coordY;

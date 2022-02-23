@@ -7,14 +7,14 @@ using System.Linq;
 public class Piece : MonoBehaviour
 {
     public EChessPieceType PieceType { get; private set; } 
-    public ChessBoardBox currentBox { get; private set; }
+    public ChessBoardBox Box { get; private set; }
 
     //public GameObject moveLeft;
     //public GameObject moveRight;
 
     void Start()
     {
-
+        //transform.LookAt(Camera.main.transform.position, -Vector3.up);
         /*
         var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c => c != GetComponent<Collider2D>())
@@ -30,8 +30,14 @@ public class Piece : MonoBehaviour
         //moveRight.SetActive(false);
     }
 
+    public void SetBox(ChessBoardBox newBox)
+    {
+        Box = newBox;
+    }
+
     void Update()
     {
+        transform.forward = Camera.main.transform.forward;
         /*if (isDragging)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

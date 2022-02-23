@@ -5,13 +5,16 @@ using UnityEngine;
 public class ChessGameController
 {
     public ChessPlayerController playerController;
-    public TurnController turnController;
+    public ChessTurnController turnController;
     public ChessBoard Board { get; private set; }
 
     public ChessGameController()
     {
         playerController = new ChessPlayerController();
-        CreatePlayers();
+        playerController.CreateTestingPlayers();
+
+        turnController = new ChessTurnController();
+        turnController.Init();
 
         Board = new ChessBoard();
         Board.StandardFill(playerController.playerList.ToArray());
@@ -21,12 +24,6 @@ public class ChessGameController
     public void StartChessGame()
     {
         turnController.NextTurn();
-    }
-
-    public void CreatePlayers()
-    {
-        playerController.AddPlayer(new ChessPlayer("Diana", EChessColor.White));
-        playerController.AddPlayer(new ChessPlayer("Ronnie", EChessColor.Black));
     }
 
 }

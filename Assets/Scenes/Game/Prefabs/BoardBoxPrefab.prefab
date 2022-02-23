@@ -108,8 +108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8578640358757901484}
   - component: {fileID: 3620556331259531615}
+  - component: {fileID: -7940697750393486738}
   m_Layer: 0
-  m_Name: BoardBox
+  m_Name: BoardBoxPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,3 +145,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 0.05, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7940697750393486738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578640358757901487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6eb5fd55747ada429cdfcbc736249d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 3628079267268862250, guid: 6fae070f8ea2ba34f9b9723e6a505e4f, type: 3}

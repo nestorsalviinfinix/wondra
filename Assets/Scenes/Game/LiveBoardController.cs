@@ -8,37 +8,47 @@ public class LiveBoardController : MonoBehaviour
     private int boardHeight;
     public float boxWidth;
     public float boxHeight;
-    private ChessBoard dataController;
+    public LiveBox[,] boxes;
+    private ChessBoard chessBoard;
 
     public Material[] boxesMaterials;
-    public GameObject boxPrefab;
+    public LiveBox boxPrefab;
+
+    public LiveBox SelectedBox { get; set; }
 
     public void CreateBoxMatrix()
     {
+        boxes = new LiveBox[boardWidth, boardHeight];
+
         for (int x = 0; x < boardWidth; x++)
             for (int y = 0; y < boardHeight; y++)
             {
                 float posX = boxWidth * (2*x - boardWidth)/4;
                 float posY = boxHeight * (boardHeight - 2*y)/4;
-                GameObject box = Instantiate(boxPrefab, gameObject.transform);
+                LiveBox box = Instantiate(boxPrefab, gameObject.transform);
                 box.transform.position = new Vector3(posX, 0.01f, posY);
                 box.transform.parent = gameObject.transform;
 
                 MeshRenderer render = box.GetComponentInChildren<MeshRenderer>();
-                EChessColor color = dataController.boxes[x, y].Color;
-
+                EChessColor color = chessBoard.boxes[x, y].Color;
+                 
                 render.material = color == EChessColor.White ? boxesMaterials[0] : boxesMaterials[1];
 
-                box.name = $"{ChessBoard.ToAlgebraic(new Vector2(x, y))} - {dataController.boxes[x, y].Color}";
+                box.name = $"{ChessBoard.ToAlgebraic(new Vector2(x, y))} - {chessBoard.boxes[x, y].Color}";
+
+                boxes[x, y] = box;
+                box.CoordX = x;
+                box.CoordY = y;
+                box.Init();
             }
     }
 
-    public void SetData(ChessBoard data)
+    public void Init(ChessBoard data)
     {
-        dataController = data;
+        chessBoard = data;
 
-        boardWidth = dataController.sizeWidth;
-        boardHeight = dataController.sizeHeight;
+        boardWidth = chessBoard.sizeWidth;
+        boardHeight = chessBoard.sizeHeight;
 
         boxWidth = boxPrefab.GetComponent<BoxCollider>().size.x * 2;
         boxHeight = boxPrefab.GetComponent<BoxCollider>().size.z * 2;

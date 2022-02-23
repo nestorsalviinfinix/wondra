@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ITurnPhaseStrategy
 {
-    public void Execute(TurnController turnManager);
+    public void Execute(ChessTurnController turnManager);
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LiveGameController : MonoBehaviour
 {
-    public ChessGameController gameController;
-    public LiveBoardController boardController;
+    private ChessGameController gameController;
+    public LiveBoardController liveBoard;
     public LivePieceController pieceController;
 
     void Start()
@@ -14,11 +14,13 @@ public class LiveGameController : MonoBehaviour
         gameController = new ChessGameController();
 
         // set board data on live board
-        boardController.SetData(gameController.Board);
-        Debug.Log(boardController);
+        liveBoard.Init(gameController.Board);
 
         // create live board boxes
-        boardController.CreateBoxMatrix();
+        liveBoard.CreateBoxMatrix();
+
+        pieceController.Init(gameController);
+        pieceController.CreatePieces();
     }
 
     // Update is called once per frame
