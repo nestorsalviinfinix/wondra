@@ -14,12 +14,6 @@
 /[Uu]serSettings/
 /[Pp]rojectSettings/
 
-#Logs
-Logs
-#ProjectSettings
-ProjectSettings
-#UserSettings
-UserSettings
 
 # Never ignore Asset meta data
 !/[Aa]ssets/*/.meta
