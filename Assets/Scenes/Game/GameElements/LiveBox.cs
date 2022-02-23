@@ -5,22 +5,27 @@ using UnityEngine;
 public class LiveBox : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Piece piece;
+    public LivePiece piece;
     public int CoordX { get; set; }
     public int CoordY { get; set; }
     public string ACoords { get; set; }
 
-    public List<IObserver> observers;
+    public EChessPieceType PieceType { get => piece.PieceType; }
+    public EChessColor PieceColor { get => piece.PieceColor; }
+    public static NullBox NullBox;
+
+    protected LiveBoardController _boardController;
 
     void Start()
     {
         
     }
 
-    public void Init()
+    public void Init(LiveBoardController boardController)
     {
+        _boardController = boardController;
         ACoords = ChessBoard.ToAlgebraic(new Vector2(CoordX, CoordY));
-        observers = new List<IObserver>();
+        piece = LivePiece.NullPiece;
     }
 
     // Update is called once per frame
@@ -31,10 +36,6 @@ public class LiveBox : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log($"MOUSE DOWN at {ACoords}");
-        foreach (IObserver observer in observers)
-        {
-            observer.UpdateObserver();
-        }
+        _boardController.SelectBox(this);
     }
 }

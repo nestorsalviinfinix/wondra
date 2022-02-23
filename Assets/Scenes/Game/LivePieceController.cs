@@ -12,18 +12,18 @@ public class KeyValuePair
 
 public class LivePieceController : MonoBehaviour
 {
-    public List<Piece> pieces;
+    public List<LivePiece> pieces;
     public ChessBoard boardController;
     public LiveBoardController liveBoard;
     public ChessPlayerController playerController;
     public ChessGameController gameController;
-    public Piece piecePrefab;
+    public LivePiece piecePrefab;
     public List<KeyValuePair> pieceSpritesList;
     private Dictionary<string, Sprite> _pieceSprites;
 
     public void Init(ChessGameController chessGameController)
     {
-        pieces = new List<Piece>();
+        pieces = new List<LivePiece>();
         gameController = chessGameController;
         playerController = chessGameController.playerController;
         boardController = chessGameController.Board;
@@ -38,18 +38,19 @@ public class LivePieceController : MonoBehaviour
         foreach (ChessPiece chessPiece in boardController.pieces)
         {
             //Debug.Log($"({chessPiece.coordX}, {chessPiece.coordY}) - {chessPiece.Color}-{chessPiece.Type} from {chessPiece.Owner.PlayerName}");
-            Piece newPiece = CreatePiece(chessPiece);
+            LivePiece newPiece = CreatePiece(chessPiece);
             pieces.Add(newPiece);
         }
     }
 
-    public Piece CreatePiece(ChessPiece chessPiece)
+    public LivePiece CreatePiece(ChessPiece chessPiece)
     {
         //Debug.Log(chessPiece.coordX);
         //Debug.Log(chessPiece.coordY);
         //Debug.Log(ChessBoard.ToVector(chessPiece.coordX + chessPiece.coordY.ToString()));
         LiveBox liveBox = liveBoard.boxes[chessPiece.coordX, chessPiece.coordY];
-        Piece newPiece = Instantiate(piecePrefab, liveBox.transform);
+        LivePiece newPiece = Instantiate(piecePrefab, liveBox.transform);
+        liveBox.piece = newPiece;
 
         newPiece.transform.parent = gameObject.transform;
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,15 @@ public class LiveBoardController : MonoBehaviour
 
     public Material[] boxesMaterials;
     public LiveBox boxPrefab;
+    public NullBox NullBox;
+    public NullPiece NullPiece;
 
-    public LiveBox SelectedBox { get; set; }
+    // text reference
+    //public event Action<LiveBox> OnLiveBoxSelected;
+    public delegate void UpdateSelectedBox(LiveBox box);
+    public static event UpdateSelectedBox OnUpdateSelectedBox;
+
+    public LiveBox SelectedBox { get; private set; }
 
     public void CreateBoxMatrix()
     {
@@ -39,12 +47,17 @@ public class LiveBoardController : MonoBehaviour
                 boxes[x, y] = box;
                 box.CoordX = x;
                 box.CoordY = y;
-                box.Init();
+
+                box.Init(this);
             }
     }
 
     public void Init(ChessBoard data)
     {
+        LiveBox.NullBox = this.NullBox;
+        this.NullBox.Init(this);
+        LivePiece.NullPiece = this.NullPiece;
+
         chessBoard = data;
 
         boardWidth = chessBoard.sizeWidth;
@@ -52,5 +65,17 @@ public class LiveBoardController : MonoBehaviour
 
         boxWidth = boxPrefab.GetComponent<BoxCollider>().size.x * 2;
         boxHeight = boxPrefab.GetComponent<BoxCollider>().size.z * 2;
+
     }
+
+    public void SelectBox(LiveBox box)
+    {
+        SelectedBox = box;
+
+        // show text
+        // text.setSelectedBox(LiveBox)
+        //OnLiveBoxSelected(box);
+        OnUpdateSelectedBox?.Invoke(box);
+    }
+
 }
