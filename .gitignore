@@ -13,6 +13,7 @@
 /[Ll]ogs/
 /[Uu]serSettings/
 /[Pp]rojectSettings/
+UserSettings/**
 
 
 # Never ignore Asset meta data
