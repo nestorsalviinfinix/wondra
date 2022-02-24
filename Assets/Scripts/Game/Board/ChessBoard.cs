@@ -21,10 +21,23 @@ public class ChessBoard
             for (int y = 0; y < sizeHeight; y++)
             {
                 boxes[x, y] = new ChessBoardBox(x, y, currentColor);
+                boxes[x, y].Board = this;
                 currentColor = currentColor == EChessColor.White ? EChessColor.Black : EChessColor.White;
             }
             currentColor = currentColor == EChessColor.White ? EChessColor.Black : EChessColor.White;
         }
+
+        ChessPiece.moveStrategies = new Dictionary<EChessPieceType, IPieceMoveStrategy>()
+        {
+            { EChessPieceType.PAWN, new PawnPossibleMoves() },
+            { EChessPieceType.KING, new KingPossibleMoves() },
+            { EChessPieceType.QUEEN, new QueenPossibleMoves() },
+            { EChessPieceType.KNIGHT, new KnightPossibleMoves() },
+            { EChessPieceType.BISHOP, new BishopPossibleMoves() },
+            { EChessPieceType.TOWER, new TowerPossibleMoves() },
+            { EChessPieceType.NULL, new NullPiecePossibleMoves() },
+
+        };
     }
 
     public void Fill(Dictionary<int[], ChessPiece> dict)
@@ -50,7 +63,8 @@ public class ChessBoard
             { new int[]{ 1, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
             { new int[]{ 2, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
             { new int[]{ 3, 0}, new ChessPiece(EChessPieceType.QUEEN, players[1])},
-            { new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, players[1])},
+            //{ new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, players[1])},
+            { new int[]{ 3, 3}, new ChessPiece(EChessPieceType.KING, players[1])},
             { new int[]{ 5, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
             { new int[]{ 6, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
             { new int[]{ 7, 0}, new ChessPiece(EChessPieceType.TOWER, players[1])},
@@ -68,7 +82,8 @@ public class ChessBoard
             { new int[]{ 1, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
             { new int[]{ 2, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
             { new int[]{ 3, 7}, new ChessPiece(EChessPieceType.QUEEN, players[0])},
-            { new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, players[0])},
+            //{ new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, players[0])},
+            { new int[]{ 4, 2}, new ChessPiece(EChessPieceType.KING, players[0])},
             { new int[]{ 5, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
             { new int[]{ 6, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
             { new int[]{ 7, 7}, new ChessPiece(EChessPieceType.TOWER, players[0])},

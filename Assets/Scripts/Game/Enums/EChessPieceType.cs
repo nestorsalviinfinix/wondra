@@ -5,5 +5,6 @@ public enum EChessPieceType
     KING,
     QUEEN,
     TOWER,
-    KNIGHT
+    KNIGHT,
+    NULL
 }

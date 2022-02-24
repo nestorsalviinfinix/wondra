@@ -37,5 +37,7 @@ public class LiveBox : MonoBehaviour
     public void OnMouseDown()
     {
         _boardController.SelectBox(this);
+
+        //piece.GetAvailableActions();
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 //[RequireComponent(typeof(Collider2D))]
 public class LivePiece : MonoBehaviour
@@ -20,9 +21,20 @@ public class LivePiece : MonoBehaviour
         Box = newBox;
     }
 
+    public List<ChessBoardBox> GetLivePossibleMoves()
+    {
+        if (this == LivePiece.NullPiece) return new List<ChessBoardBox>();
+        List<ChessBoardBox> moveList = GetChessPiece().GetChessPossibleMoves();
+        return moveList;
+    }
+
+    public ChessPiece GetChessPiece()
+    {
+        return Box.Board.boxes[Box.CoordX, Box.CoordY].Piece;
+    }
+
     void Update()
     {
         transform.forward = Camera.main.transform.forward;
     }
-
 }

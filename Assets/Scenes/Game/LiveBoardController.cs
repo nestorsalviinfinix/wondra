@@ -10,7 +10,7 @@ public class LiveBoardController : MonoBehaviour
     public float boxWidth;
     public float boxHeight;
     public LiveBox[,] boxes;
-    private ChessBoard chessBoard;
+    public ChessBoard chessBoard;
 
     public Material[] boxesMaterials;
     public LiveBox boxPrefab;
@@ -21,6 +21,9 @@ public class LiveBoardController : MonoBehaviour
     //public event Action<LiveBox> OnLiveBoxSelected;
     public delegate void UpdateSelectedBox(LiveBox box);
     public static event UpdateSelectedBox OnUpdateSelectedBox;
+
+    public delegate void UpdatePossibleMoves(List<ChessBoardBox> movesList);
+    public static event UpdatePossibleMoves OnUpdatePossibleMoves;
 
     public LiveBox SelectedBox { get; private set; }
 
@@ -76,6 +79,8 @@ public class LiveBoardController : MonoBehaviour
         // text.setSelectedBox(LiveBox)
         //OnLiveBoxSelected(box);
         OnUpdateSelectedBox?.Invoke(box);
+        List<ChessBoardBox> possibleMoves = box.piece.GetLivePossibleMoves();
+        OnUpdatePossibleMoves.Invoke(possibleMoves);
     }
 
 }

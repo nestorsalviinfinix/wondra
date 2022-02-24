@@ -13,10 +13,12 @@ public class ChessBoardBox
     public char ACoordX { get; private set; }
     public int ACoordY { get; private set; }
 
+    public ChessBoard Board { get; set; }
+
     public ChessBoardBox(int coordX, int coordY, EChessColor color)
     {
         Color = color;
-        ACoordX = Convert.ToChar(coordY + 97);
+        ACoordX = Convert.ToChar(coordX + 97);
         ACoordY = coordY + 1;
 
         CoordX = coordX;

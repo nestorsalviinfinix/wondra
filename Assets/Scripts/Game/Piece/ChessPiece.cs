@@ -9,6 +9,8 @@ public class ChessPiece
     public EChessPieceType Type { get; private set; }
     public ChessBoardBox Box { get; set; }
 
+    public static Dictionary<EChessPieceType, IPieceMoveStrategy> moveStrategies;
+
     public int coordX;
     public int coordY;
 
@@ -22,5 +24,11 @@ public class ChessPiece
         Type = type;
         Owner = player;
         Color = player.Color;
+    }
+
+    public List<ChessBoardBox> GetChessPossibleMoves()
+    {
+        List<ChessBoardBox> moveList = (List<ChessBoardBox>)moveStrategies[Type].GetPossibleMoves(this);
+        return moveList;
     }
 }
