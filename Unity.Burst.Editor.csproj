@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2C1644BF-E677-FDD8-2C97-878D9D8E08FD}</ProjectGuid>
+    <ProjectGuid>{DC550EE2-6890-5D93-8A03-DDFA16EEA232}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Burst.Editor</AssemblyName>
@@ -56,18 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.ARM64.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstLoader.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\LongTextArea.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstAotCompiler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.Wasm.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.LLVMIR.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.ARM64.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstInspectorGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstAotSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.cs" />
     <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.x86.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstAotCompiler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.Wasm.cs" />
-    <Compile Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\BurstDisassembler.Core.LLVMIR.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.burst@1.6.0\Editor\Unity.Burst.Editor.asmdef" />
@@ -769,15 +769,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{1BAC57AC-4855-3769-5E45-9E1C37F4280E}</Project>
+      <Project>{89006B70-FF43-CD31-2425-C54A206FD2C6}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

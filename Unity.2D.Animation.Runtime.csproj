@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{82F35AA7-6AF1-6D08-CE83-F9FAAE567221}</ProjectGuid>
+    <ProjectGuid>{3949D76D-077A-7533-F9D3-39D081696570}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Animation.Runtime</AssemblyName>
@@ -57,22 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkin.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinBatch.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\UpdateBoundsJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SkeletonAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\Bone.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteLibraryData.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\BufferManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\TransformAccessJob.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\NativeArrayHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteLibrary.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\NativeCustomSlice.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteResolver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteLibrarySourceAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinBatch.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SkeletonAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\TransformAccessJob.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.2\Runtime\SpriteSkinComposite.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -760,19 +760,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{1CF62B8E-B6DB-8B66-0281-BD4B96CB3914}</Project>
+      <Project>{4CF502C1-472C-6337-E151-6D2A1EDE5610}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{D78457EA-3D4F-786C-675F-383986C23D2D}</Project>
+      <Project>{EB79B864-F0E1-55ED-95A3-3B382BC3852C}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{1A53EB3A-1D81-2D63-D0E4-DAA2DD2A3678}</Project>
+      <Project>{8B074841-65E1-186B-4344-A8159215FEBB}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{1BAC57AC-4855-3769-5E45-9E1C37F4280E}</Project>
+      <Project>{89006B70-FF43-CD31-2425-C54A206FD2C6}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{13954EEB-744C-FDF1-B0A7-C2C6E954CDFF}</ProjectGuid>
+    <ProjectGuid>{AC79C44C-3861-8F7E-5E25-C8A8BA103901}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.State.Editor</AssemblyName>
@@ -56,25 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Description\StateMachineDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_1.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\IStateTransitionWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Properties\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\StateUnitWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_2.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltStateConfiguration.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_2.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\StateGraphEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionAnalyser.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\AnyStateDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Graph\StateCanvas.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\StateUnitDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\SuperStateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Graph\StateGraphContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\FlowStateWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\TriggerStateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_4.cs" />
@@ -82,47 +68,61 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\StateUnitEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_3_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionDescription.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_1.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_6_to_1_7.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltStateManifest.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\StateRevealCondition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateAnalyser.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_0.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_5_1_to_1_5_2.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\AnyStateWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\FlowStateTransitionWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\UnitBaseStateExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateTransitionAnalysis.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\FlowStateEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_3.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_1.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_Asset_to_Package.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\NesterStateAnalyser.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Description\StateMachineDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_1.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\IStateTransitionWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\StateUnitWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_2.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_2.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\StateGraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionAnalyser.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\AnyStateDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\SuperStateDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Graph\StateGraphContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Analytics\StateMacroSavedEvent.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltStateResources.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\SuperStateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\FlowStateTransitionAnalyser.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_1.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_6_to_1_7.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltStateManifest.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\StateRevealCondition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_3.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\FlowGraphContextStateExtension.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_2.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\SuperStateEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\FlowStateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_5_1_to_1_5_2.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\StateTransitionEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\AnyStateWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\FlowStateTransitionWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Flow\UnitBaseStateExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Description\StateGraphDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateDescription.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\FlowStateTransitionEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\NesterStateEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\NesterStateWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateTransitionAnalysis.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\FlowStateEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\IStateWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_3.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\NesterStateTransitionDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\BoltState.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_1.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Migrations\Migration_Asset_to_Package.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\NesterStateAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Transitions\FlowStateTransitionDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_0.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\States\StateEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.State\Description\StateMacroDescriptor.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -825,31 +825,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{E29A02F5-8E45-F982-5C91-3489A5997A0B}</Project>
+      <Project>{7B09F1D7-C31B-3667-7022-C4A3B50EE877}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{426FAC27-619E-8D43-3E3C-CFA477B1D513}</Project>
+      <Project>{DA9BF7F2-A997-7D92-C255-AA34577BE22C}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{2FEC7BF2-AF0B-F103-2C8B-B6268681CB96}</Project>
+      <Project>{6A496947-1D52-F73D-FF72-1D2FE315E1F2}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{05CC8355-8D4F-656E-7CA4-8FAFC93F6962}</Project>
+      <Project>{0F3AD32D-BC82-70D9-5B1A-C2DD09DCD9A7}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{D3BA3562-6703-81D9-2927-07F39CDD71DD}</Project>
+      <Project>{27EC234E-680F-F5FD-D17A-37B737623070}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

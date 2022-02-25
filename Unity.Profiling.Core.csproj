@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EAF42443-69F1-427E-44D9-6B78721D993D}</ProjectGuid>
+    <ProjectGuid>{7EC946AC-C17E-344B-2B9D-2E3A24D280D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Profiling.Core</AssemblyName>
@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounterValue.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarkerExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCategory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker2Params.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker3Params.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker1Param.cs" />
     <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCounterValue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerCategory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker2Params.cs" />
+    <Compile Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\ProfilerMarker1Param.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.profiling.core@1.0.0\Runtime\Unity.Profiling.Core.asmdef" />

@@ -5,7 +5,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 
-public class OwnerCard : MonoBehaviour
+public class OwnerCard : MonoBehaviour, IFiltrable
 {
     private CardData _cardData;
 
@@ -13,6 +13,7 @@ public class OwnerCard : MonoBehaviour
     public ParticleSystem par;
     public int price = 1;
     public CardInformation cardInfo;
+    public CardInStore myStoreReferent;
     public void SetCardData(CardData cd)
     {
         _cardData = cd;
@@ -48,5 +49,14 @@ public class OwnerCard : MonoBehaviour
         anim.speed = 0;
         par.Stop();
         par.Clear();
+    }
+
+    public string GetCodeName()
+    {
+        return cardInfo.title.text;
+    }
+    public void SetShowObject(bool b)
+    {
+        gameObject.SetActive(b);
     }
 }

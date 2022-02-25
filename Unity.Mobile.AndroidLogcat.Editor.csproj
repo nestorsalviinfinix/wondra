@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B3D1B8E7-2899-66F5-9822-04B60B6EC663}</ProjectGuid>
+    <ProjectGuid>{4BCD1538-A4AE-CB53-7D0F-7BDB526E9D0F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Mobile.AndroidLogcat.Editor</AssemblyName>
@@ -57,45 +57,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatStyles.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatColumnData.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\UI\AndroidLogcatSymbolList.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatBuildInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatMemoryViewer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatMessageProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatInternalLog.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidTools\AndroidTools.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatMessagesViews.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatDevice.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatPackageInformation.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatTagInformation.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\UI\AndroidLogcatRegexList.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidTools\AndroidBridge.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidTools\Paths.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\UI\AndroidLogcatReordableList.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatUtilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatRuntime.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatConnectToDeviceTask.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcat.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatIPWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatUserSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatCallbacks.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatTags.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatStatusBar.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatTaskResult.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatProjectSettingsProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatStacktraceWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatScreenCaptureWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatSettingsProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatDispatcher.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatTaskInput.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatConsoleWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatDeviceQuery.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidMemoryStatistics.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatContextMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidTools\Shell.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatColumnData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatMemoryViewer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatMessageProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatInternalLog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatDevice.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatPackageInformation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\UI\AndroidLogcatRegexList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidTools\Paths.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\UI\AndroidLogcatReordableList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatConnectToDeviceTask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatIPWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatUserSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatCallbacks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatTaskResult.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatProjectSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatScreenCaptureWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Tasks\AndroidLogcatTaskInput.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\AndroidLogcatConsoleWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.mobile.android-logcat@1.2.3\Editor\Unity.Mobile.AndroidLogcat.Editor.asmdef" />
@@ -797,11 +797,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

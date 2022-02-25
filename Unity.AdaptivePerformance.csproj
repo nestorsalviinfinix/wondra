@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6CA60650-C384-CA58-A3BE-11D0834DD6BF}</ProjectGuid>
+    <ProjectGuid>{77ABBA34-1198-88AE-65A1-861B4952BD18}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.AdaptivePerformance</AssemblyName>
@@ -58,43 +58,43 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveLut.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveShadowmapResolution.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\CpuTime.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Indexer\AdaptivePerformanceIndexer.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Subsystem\AdaptivePerformanceSubsystemDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\TemperatureTrend.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Indexer\AdaptivePerformanceRenderSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AdaptiverPerformanceLog.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveSorting.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveShadowDistance.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveBatching.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveFramerate.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\DevicePerformanceControl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceConfigurationData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IPerformanceStatus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AdaptivePerformanceInit.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveShadowCascade.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\AdaptivePerformanceAnalytics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Subsystem\AdaptivePerformanceSubsystem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Indexer\AdaptivePerformanceScaler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceLoaderHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Profiler\AdaptivePerformanceProfilerStats.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveMSAA.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceManagerSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\CpuTime.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\TemperatureTrend.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AutoPerformanceLevelController.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveShadowQuality.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\DevicePerformanceControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceLoader.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AdaptivePerformanceManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveViewDistance.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IAdaptivePerformance.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveTransparency.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceConfigurationData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IPerformanceStatus.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceGeneralSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AdaptivePerformanceInit.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveShadowCascade.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\AdaptivePerformanceBottleneckDetection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\AdaptivePerformanceAnalytics.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Subsystem\AdaptivePerformanceSubsystem.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveResolution.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IDevelopmentSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Indexer\AdaptivePerformanceScaler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceLoaderHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Profiler\AdaptivePerformanceProfilerStats.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IThermalStatus.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\RunningAverage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\IAdaptivePerformanceSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveLOD.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Scalers\AdaptiveMSAA.cs" />
-    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\AdaptivePerformanceManagerSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Management\IAdaptivePerformanceSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\IDevicePerformanceControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.adaptiveperformance@3.0.0\Runtime\Core\GpuTime.cs" />
   </ItemGroup>
@@ -783,11 +783,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Subsystem.Registration.csproj">
-      <Project>{FB71D797-F505-3847-BEFF-3BF8F0E240CE}</Project>
+      <Project>{BD152385-8AA0-9F6F-7829-427DD1AD787A}</Project>
       <Name>Unity.Subsystem.Registration</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Profiling.Core.csproj">
-      <Project>{EAF42443-69F1-427E-44D9-6B78721D993D}</Project>
+      <Project>{7EC946AC-C17E-344B-2B9D-2E3A24D280D7}</Project>
       <Name>Unity.Profiling.Core</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BoardQueenBlack
+  m_Controller: {fileID: 9100000, guid: cf4fae27fb6b02248b9dcc1882457751, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 142b378ca6183534196c619c5e595062, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d986183f0d0656b4fbbd83c43d7dd36c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 04a4b39e4270720438c670af8eccd327, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 134c42290315b4542965ced574af470e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d6d6bd9447765e44d9b3c06f83127f18, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e9c5ad46d2a985b46a1cc6faa5027512, type: 2}

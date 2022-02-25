@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1736E819-E61E-50AB-8A40-5C27DFA1FFC0}</ProjectGuid>
+    <ProjectGuid>{A251B4FD-9794-7927-5855-C59E65B4221B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.InternalAPIEditorBridge.001</AssemblyName>
@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Editor\InternalBridge\InternalEditorBridge.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Editor\InternalBridge\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Editor\InternalBridge\TexturePlatformSettings\TexturePlatformSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.1\Editor\InternalBridge\InternalEditorBridge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.common@6.0.1\Editor\InternalBridge\InternalBridgeDef.asmdef" />
@@ -763,11 +763,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

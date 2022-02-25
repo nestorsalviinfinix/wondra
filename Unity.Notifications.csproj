@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C4459437-D1E6-81F6-4F6D-F7F135DCF5BE}</ProjectGuid>
+    <ProjectGuid>{5A8A2393-7651-5EEF-A41A-ECD705F6391A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Notifications</AssemblyName>
@@ -58,18 +58,18 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\DrawableResourceData.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationStyles.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSetting.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\iOSAuthorizationOption.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettingsManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\iOSNotificationPostProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationIconType.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettingsCollection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettingsProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\AssembyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\iOSPresentationOption.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\TextureAssetUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\AndroidNotificationPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSetting.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettingsManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationIconType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\NotificationSettingsProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Editor\Unity.Mobile.Notifications.Editor.asmdef" />
@@ -771,19 +771,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Notifications.iOS.csproj">
-      <Project>{00E33488-B763-80D5-89FD-97D0895FA9EF}</Project>
+      <Project>{E55784A8-4555-0279-67E4-B9D025271FFD}</Project>
       <Name>Unity.Notifications.iOS</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{65EFEAB3-F535-1C0B-F4AB-BA361708E6E5}</Project>
+      <Project>{211CD9E3-7BF7-4B50-95A2-4629F4AB0A52}</Project>
       <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1A8B365E-4CE4-3A4A-E19D-A09257C52CD0}</Project>
+      <Project>{02F17B78-50BD-BCE7-9669-56BF9272D1F8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9DE4F244-0A42-5794-BE62-BF7B7C53D483}</Project>
+      <Project>{89313467-4B16-B6FA-99D1-4DCC92190C8F}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
