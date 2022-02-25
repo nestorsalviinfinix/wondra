@@ -53,7 +53,7 @@ public class LivePieceController : MonoBehaviour
         liveBox.piece = newPiece;
 
         newPiece.transform.parent = gameObject.transform;
-
+        newPiece.liveBoard = this.liveBoard;
         newPiece.SetBox(boardController.boxes[chessPiece.coordX, chessPiece.coordY]);
 
         string color = chessPiece.Color.ToString().ToUpper();

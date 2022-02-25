@@ -10,6 +10,7 @@ public class LivePiece : MonoBehaviour
     public virtual EChessColor PieceColor { get => Box.Piece.Color; }
     public virtual EChessPieceType PieceType { get => Box.Piece.Type; }
     public ChessBoardBox Box { get; protected set; }
+    public LiveBoardController liveBoard;
     public static NullPiece NullPiece;
 
     void Start()
@@ -36,5 +37,20 @@ public class LivePiece : MonoBehaviour
     void Update()
     {
         transform.forward = Camera.main.transform.forward;
+    }
+
+    internal void ExecuteActionTo(IAction action, LiveBox box)
+    {
+        int x = Box.CoordX;
+        int y = Box.CoordY;
+
+        action.ExecuteAction(Box, Box.Board.boxes[box.CoordX, box.CoordY]);
+        box.piece = this;
+        liveBoard.boxes[x, y].piece = NullPiece;
+        Box = box.chessBox;
+        transform.position = liveBoard.boxes[Box.CoordX, box.CoordY].gameObject.transform.position;
+        Vector3 pos = transform.position;
+        pos.y += 1;
+        transform.position = pos;
     }
 }

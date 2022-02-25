@@ -7,18 +7,15 @@ public class SelectCircle : MonoBehaviour
     public GameObject sprite;
     public LiveBoardController board;
 
-    //private float _glowingUp = 1;
-    //private float _currentGlow = 1;
     public float glowSpeed = 1;
 
     void Start()
     {
     }
 
-    // Update is called once per frame
     void Update()
     {
-        bool _pieceIsSelected = board.SelectedBox.piece != LivePiece.NullPiece;
+        bool _pieceIsSelected = board.selectedBox?.piece != LivePiece.NullPiece;
         sprite.SetActive(_pieceIsSelected);
 
         if (!_pieceIsSelected) return;

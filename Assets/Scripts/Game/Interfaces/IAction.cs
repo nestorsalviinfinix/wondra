@@ -1,4 +1,4 @@
 public interface IAction
 {
-    public void ExecuteAction();
+    public void ExecuteAction(ChessBoardBox originBox, ChessBoardBox destinyBox);
 }

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public abstract class Action : IAction
 {
-    public void ExecuteAction()
+    public static Dictionary<EActionType, Action> actions;
+    public static void Init()
     {
-        Debug.Log("ACTION EXECUTED!");
+        actions = new Dictionary<EActionType, Action>();
+        actions.Add(EActionType.Move, new ActionMovement());
     }
+
+    public abstract void ExecuteAction(ChessBoardBox originBox, ChessBoardBox destinyBox);
 }

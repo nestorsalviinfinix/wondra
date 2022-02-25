@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Menu\ArmoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Piece\Actions\PieceMoveStrategies.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessBoardManager.cs" />
+    <Compile Include="Assets\Resources\GameUI\SelectCircle\SelectCircle.cs" />
     <Compile Include="Assets\Scenes\Game\UI\TextSelectedPiece.cs" />
     <Compile Include="Assets\Scripts\Menu\ScrollBarForce.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessPlayerController.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\Scripts\Game\Enums\EChessPieceType.cs" />
     <Compile Include="Assets\Scripts\Menu\HistoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoardBox.cs" />
-    <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
     <Compile Include="Assets\Scripts\Menu\TransportData.cs" />
     <Compile Include="Assets\Scripts\Menu\HistoryCard.cs" />
     <Compile Include="Assets\Scripts\Menu\Menus.cs" />
@@ -108,7 +108,10 @@
     <Compile Include="Assets\Scripts\Game\Piece\ChessPiece.cs" />
     <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
     <Compile Include="Assets\Scripts\Cards\OwnerCard.cs" />
-    <Compile Include="Assets\Resources\GameUI\SelectCircle\SelectCircle.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\ELiveBoardBoxStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\ActionMovement.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\EActionType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -16,6 +16,8 @@ public class LiveGameController : MonoBehaviour
         // set board data on live board
         liveBoard.Init(gameController.Board);
 
+        Action.Init();
+
         // create live board boxes
         liveBoard.CreateBoxMatrix();
 

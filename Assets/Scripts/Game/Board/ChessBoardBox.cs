@@ -29,6 +29,9 @@ public class ChessBoardBox
     public void SetPiece(ChessPiece piece)
     {
         this.Piece = piece;
+        Debug.Log(Piece);
+
+        if (piece == null) return;
         piece.Box = this;
         piece.coordX = CoordX;
         piece.coordY = CoordY;
