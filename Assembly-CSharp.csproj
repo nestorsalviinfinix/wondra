@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Menu_Scripts\FalseScoreTest.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ButtonFeedBack.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\SaveLoadJsons.cs" />
+    <Compile Include="Assets\Scripts\Menu_Scripts\ABChangeColor.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\Decorate\IdleWaitExecute.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\AccountMenu.cs" />
     <Compile Include="Assets\Scripts\Card_Scripts\CardData.cs" />

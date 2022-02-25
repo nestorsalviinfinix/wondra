@@ -1,14 +1,18 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using System.IO;
 using System.Linq;
+using UnityEngine.Networking;
+
 public static class TransportData
 {
     public static readonly string webServer = "wondrachess.xanthops.com/api/v1";
     public static float currentBarInfo;
     public static string namePlayer = "Player" + Random.Range(1,1000000);
     public static bool isConnect = false;
-    public static int myMoney = 999;
     public static string access_token;
+    public static int myMoney = 999;
     private static List<CardDataBase> _cardsDataBase = new List<CardDataBase>();
     public static List<HistoryCardDataBase> historyCards = new List<HistoryCardDataBase>();
     public static List<CardInStore> cardInStore = new List<CardInStore>();
@@ -20,6 +24,7 @@ public static class TransportData
                                                 new PiecesWithCard(4),
                                                 new PiecesWithCard(5)
                                                 };
+
     public static void AddCardInDatabase(string cardName, CardData cd)
     {
         if (!ExistNameInList(cardName))
@@ -100,6 +105,20 @@ public class HistoryCardDataBase
         dYear = year;
         date = day.ToString() + "/" + month.ToString() +"/" + year.ToString();
     }
+}
+[System.Serializable]
+public class SaveCardData
+{
+    [SerializeField]
+    public int currentMoney;
+    [SerializeField]
+        public List<CardDataBase> cardsInPossession = new List<CardDataBase>();
+    [SerializeField]
+    public List<HistoryCardDataBase> historyCards = new List<HistoryCardDataBase>();
+    [SerializeField]
+    public List<CardInStore> cardInStore = new List<CardInStore>();
+    [SerializeField]
+    public PiecesWithCard[] piecesCard;
 }
 public class PiecesWithCard
 {

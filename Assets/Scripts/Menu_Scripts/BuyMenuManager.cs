@@ -34,6 +34,14 @@ public class BuyMenuManager : MonoBehaviour
         InitialFilterCard();
     }
     #region test
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            TransportData.myMoney += 100;
+            myMoneyText.text = "" + TransportData.myMoney;
+        }
+    }
     private void CreateFakeStore()
     {
         List<CardInStore> fakeList = new List<CardInStore>();

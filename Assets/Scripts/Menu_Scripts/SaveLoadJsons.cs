@@ -9,6 +9,7 @@ public class SaveLoadJsons : MonoBehaviour
 {
     private static SaveLoadJsons instance;
     private Dictionary<string, string> paths = new Dictionary<string, string>();
+
     public static SaveLoadJsons Instance
     {
         get
