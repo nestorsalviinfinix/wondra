@@ -63,8 +63,8 @@ public class ChessBoard
             { new int[]{ 1, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
             { new int[]{ 2, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
             { new int[]{ 3, 0}, new ChessPiece(EChessPieceType.QUEEN, players[1])},
-            //{ new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, players[1])},
-            { new int[]{ 3, 3}, new ChessPiece(EChessPieceType.KING, players[1])},
+
+            { new int[]{ 4, 0}, new ChessPiece(EChessPieceType.KING, players[1])},
             { new int[]{ 5, 0}, new ChessPiece(EChessPieceType.BISHOP, players[1])},
             { new int[]{ 6, 0}, new ChessPiece(EChessPieceType.KNIGHT, players[1])},
             { new int[]{ 7, 0}, new ChessPiece(EChessPieceType.TOWER, players[1])},
@@ -73,17 +73,19 @@ public class ChessBoard
             { new int[]{ 1, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
             { new int[]{ 2, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
             { new int[]{ 3, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
+
             { new int[]{ 4, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
             { new int[]{ 5, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
             { new int[]{ 6, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
             { new int[]{ 7, 1}, new ChessPiece(EChessPieceType.PAWN, players[1])},
 
+
             { new int[]{ 0, 7}, new ChessPiece(EChessPieceType.TOWER, players[0])},
             { new int[]{ 1, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
             { new int[]{ 2, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
             { new int[]{ 3, 7}, new ChessPiece(EChessPieceType.QUEEN, players[0])},
-            //{ new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, players[0])},
-            { new int[]{ 4, 2}, new ChessPiece(EChessPieceType.KING, players[0])},
+
+            { new int[]{ 4, 7}, new ChessPiece(EChessPieceType.KING, players[0])},
             { new int[]{ 5, 7}, new ChessPiece(EChessPieceType.BISHOP, players[0])},
             { new int[]{ 6, 7}, new ChessPiece(EChessPieceType.KNIGHT, players[0])},
             { new int[]{ 7, 7}, new ChessPiece(EChessPieceType.TOWER, players[0])},
@@ -92,6 +94,7 @@ public class ChessBoard
             { new int[]{ 1, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
             { new int[]{ 2, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
             { new int[]{ 3, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
+
             { new int[]{ 4, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
             { new int[]{ 5, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},
             { new int[]{ 6, 6}, new ChessPiece(EChessPieceType.PAWN, players[0])},

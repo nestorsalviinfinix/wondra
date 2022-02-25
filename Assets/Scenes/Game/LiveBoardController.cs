@@ -114,7 +114,7 @@ public class LiveBoardController : MonoBehaviour
         if (box.Status == ELiveBoardBoxStatus.WaitingForAction)
         {
             // move piece
-            Debug.Log($"Will move to: {box.ACoords}");
+            //Debug.Log($"Will move to: {box.ACoords}");
 
             EActionType currentActionType = EActionType.Move;
             IAction action = Action.actions[currentActionType];
