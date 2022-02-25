@@ -13,7 +13,7 @@ public class KingPossibleMoves : IPieceMoveStrategy
         int maxX = board.sizeWidth - 1;
         int maxY = board.sizeHeight - 1;
 
-        Debug.Log($"coords: ({x}, {y}) | max: ({maxX}, {maxY})");
+        //Debug.Log($"coords: ({x}, {y}) | max: ({maxX}, {maxY})");
 
         List<ChessBoardBox> candidates = new List<ChessBoardBox>();
         if (x - 1 >= 0)                         candidates.Add(board.boxes[x - 1, y]);
@@ -29,7 +29,7 @@ public class KingPossibleMoves : IPieceMoveStrategy
 
         foreach (ChessBoardBox candidate in candidates)
         {
-            Debug.Log($"-- piece: {candidate.CoordX}|{candidate.CoordY}");
+            //Debug.Log($"-- piece: {candidate.CoordX}|{candidate.CoordY}");
             if (candidate.Piece != null) continue;
 
             list.Add(candidate);

@@ -24,7 +24,7 @@ public class TextPossibleMoves : MonoBehaviour
         string finalText = $"Possible Moves ({moveList.Count}): ";
         foreach (ChessBoardBox move in moveList)
         {
-            Debug.Log($"{move.CoordX}|{move.CoordY} - {move.ACoordX}|{move.ACoordY}");
+            //Debug.Log($"{move.CoordX}|{move.CoordY} - {move.ACoordX}|{move.ACoordY}");
             finalText += $"{move.ACoordX}{move.ACoordY}";
             if (move != moveList[moveList.Count - 1]) finalText += ", ";
         }

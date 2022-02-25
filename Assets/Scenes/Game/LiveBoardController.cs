@@ -26,6 +26,7 @@ public class LiveBoardController : MonoBehaviour
     public static event UpdatePossibleMoves OnUpdatePossibleMoves;
 
     public LiveBox SelectedBox { get; private set; }
+    public LivePiece SelectedPiece { get; set; }
 
     public void CreateBoxMatrix()
     {
@@ -60,6 +61,9 @@ public class LiveBoardController : MonoBehaviour
         LiveBox.NullBox = this.NullBox;
         this.NullBox.Init(this);
         LivePiece.NullPiece = this.NullPiece;
+
+        SelectedBox = NullBox;
+        SelectedPiece = NullPiece;
 
         chessBoard = data;
 

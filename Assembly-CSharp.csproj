@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scenes\Game\GameElements\NullPiece.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\TurnPhaseStrategies.cs" />
     <Compile Include="Assets\Scenes\Game\GameElements\LiveBox.cs" />
+    <Compile Include="Assets\Scenes\Game\UI\TextPossibleMoves.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessGameController.cs" />
     <Compile Include="Assets\Scripts\Menu\AccountMenu.cs" />
     <Compile Include="Assets\Scripts\Cards\CardData.cs" />
@@ -80,9 +81,11 @@
     <Compile Include="Assets\Scripts\Game\Board\BoardNode.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\ITurnPhaseStrategy.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessTurnController.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IPieceMoveStrategy.cs" />
     <Compile Include="Assets\Scripts\Menu\ButtonsAttention.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\EChessColor.cs" />
     <Compile Include="Assets\Scripts\Menu\ArmoryManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\PieceMoveStrategies.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessBoardManager.cs" />
     <Compile Include="Assets\Scenes\Game\UI\TextSelectedPiece.cs" />
     <Compile Include="Assets\Scripts\Menu\ScrollBarForce.cs" />
@@ -90,10 +93,12 @@
     <Compile Include="Assets\Scenes\Game\LivePieceController.cs" />
     <Compile Include="Assets\Scripts\Menu\SearchFilter.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IChessPlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\Action.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoard.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\EChessPieceType.cs" />
     <Compile Include="Assets\Scripts\Menu\HistoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoardBox.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
     <Compile Include="Assets\Scripts\Menu\TransportData.cs" />
     <Compile Include="Assets\Scripts\Menu\HistoryCard.cs" />
     <Compile Include="Assets\Scripts\Menu\Menus.cs" />
@@ -103,11 +108,7 @@
     <Compile Include="Assets\Scripts\Game\Piece\ChessPiece.cs" />
     <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
     <Compile Include="Assets\Scripts\Cards\OwnerCard.cs" />
-    <Compile Include="Assets\Scripts\Game\Piece\Actions\Action.cs" />
-    <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
-    <Compile Include="Assets\Scripts\Game\Interfaces\IPieceMoveStrategy.cs" />
-    <Compile Include="Assets\Scripts\Game\Piece\Actions\PieceMoveStrategies.cs" />
-    <Compile Include="Assets\Scenes\Game\UI\TextPossibleMoves.cs" />
+    <Compile Include="Assets\Resources\GameUI\SelectCircle\SelectCircle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
