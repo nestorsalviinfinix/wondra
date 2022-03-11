@@ -9,10 +9,6 @@ public class SelectCircle : MonoBehaviour
 
     public float glowSpeed = 1;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         bool _pieceIsSelected = board.selectedBox?.piece != LivePiece.NullPiece;

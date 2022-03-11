@@ -39,6 +39,11 @@ public class ArmoryManager : MonoBehaviour
     public CardInformation cardSelling;
     public ParticleSystem moneyRain;
 
+    [Header("Stats")]
+    public TextMeshProUGUI sLife;
+    public TextMeshProUGUI sDefense, sAttack, sAttackSpeed, sCritical, sBlock;
+
+
     private void Start()
     {
         //int countTest = Random.Range(6, 20); // TEST
@@ -93,6 +98,17 @@ public class ArmoryManager : MonoBehaviour
     {
         leftMenuAnim.SetBool("show", false);
     }
+
+    public void SetStats(PieceStats ps)
+    {
+        sLife.text = ps.life.ToString();
+        sDefense.text = ps.defense.ToString();
+        sAttack.text = ps.attack.ToString();
+        sAttackSpeed.text = ps.atkSpeed.ToString();
+        sCritical.text = ps.critical.ToString();
+        sBlock.text = ps.block.ToString();
+    }
+
     private void SetLeftMenu(OwnerCard oc)
     { 
         if(previewCardObj.activeSelf)
@@ -205,6 +221,8 @@ public class ArmoryManager : MonoBehaviour
             cardPreview.description.text = cd.description;
             cardPreview.artwork.sprite = cd.artwork;
         }
+        SetStats(TransportData.piecesCard[index].stats);
+
     }
     #region SellMenu
     public void SetPriceCard()

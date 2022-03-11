@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,5 +31,10 @@ public class ChessPiece
     {
         List<ChessBoardBox> moveList = (List<ChessBoardBox>)moveStrategies[Type].GetPossibleMoves(this);
         return moveList;
+    }
+
+    internal void Capture()
+    {
+
     }
 }

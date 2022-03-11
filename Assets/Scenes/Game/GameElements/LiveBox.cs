@@ -20,10 +20,6 @@ public class LiveBox : MonoBehaviour
 
     protected LiveBoardController _boardController;
 
-    void Start()
-    {
-        
-    }
 
     public void Init(LiveBoardController boardController)
     {
@@ -34,11 +30,6 @@ public class LiveBox : MonoBehaviour
         chessBox = boardController.chessBoard.boxes[CoordX, CoordY];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnMouseDown()
     {

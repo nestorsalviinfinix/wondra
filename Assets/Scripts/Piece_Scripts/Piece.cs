@@ -17,7 +17,9 @@ public class Piece : MonoBehaviour
     //public GameObject moveLeft;
     //public GameObject moveRight;
 
-    void Start()
+    public enum PieceType  {PAWN,TOWER,KNIGHT,BISHOP,QUEEN,KING};
+
+void Start()
     {
         var cols = Physics2D.OverlapCircleAll(transform.position, 1)
                         .Where(c => c != GetComponent<Collider2D>())
@@ -58,7 +60,7 @@ public class Piece : MonoBehaviour
                 return "null";
         }
     }
-
+    /*
     void Update()
     {
         if (isDragging)
@@ -98,6 +100,7 @@ public class Piece : MonoBehaviour
             transform.position = new Vector3( mousePos.x,mousePos.y,0);
         }
     }
+
     public void OnMouseDown()
     {
         isDragging = true;
@@ -112,4 +115,5 @@ public class Piece : MonoBehaviour
         //moveLeft.SetActive(false);
         //moveRight.SetActive(false);
     }
+    */
 }

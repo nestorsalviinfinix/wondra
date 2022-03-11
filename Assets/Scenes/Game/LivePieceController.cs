@@ -65,17 +65,42 @@ public class LivePieceController : MonoBehaviour
 
         SpriteRenderer spriteRenderer = newPiece.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = pieceSprite;
-        
-        if (chessPiece.Color == EChessColor.Black)
-        {
-            spriteRenderer.flipX = true;
-            Color newColor = new Color32(84, 23, 150, 255);
-            newPiece.GetComponent<SpriteRenderer>().color = newColor;
-        }
+
+        //if (chessPiece.Color == EChessColor.Black)
+        //{
+        //    spriteRenderer.flipX = true;
+        //    Color newColor = new Color32(84, 23, 150, 255);
+        //    newPiece.GetComponent<SpriteRenderer>().color = newColor;
+        //}
+
+        newPiece.GetComponent<Animator>().runtimeAnimatorController =
+            Resources.Load<RuntimeAnimatorController>(
+                "Animation/PiecesAnims/Board" + FirstBigger(type) + (chessPiece.Color == EChessColor.Black ? "Black" : "")
+                );
 
         newPiece.name = $"{chessPiece.Color} {chessPiece.Type} in " +
             $"{ChessBoard.ToAlgebraic(new Vector2(chessPiece.coordX, chessPiece.coordY))}";
 
+        Vector3 pos = newPiece.transform.position;
+        pos.y -= .8f;
+        pos.z -= .5f;
+        newPiece.transform.position = pos;
+
         return newPiece;
+    }
+
+    private string FirstBigger(string str)
+    {
+        str = str.ToLower();
+
+        if (str.Length == 0)
+           Debug.LogError("Empty String");
+        else if (str.Length == 1)
+            str = char.ToUpper(str[0]).ToString();
+        else
+            str = char.ToUpper(str[0]) + str.Substring(1);
+
+
+        return str;
     }
 }

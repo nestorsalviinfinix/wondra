@@ -13,7 +13,7 @@ public static class TransportData
     public static bool isConnect = false;
     public static string access_token;
     public static int myMoney = 999;
-    private static List<CardDataBase> _cardsDataBase = new List<CardDataBase>();
+    public static List<CardDataBase> _cardsDataBase = new List<CardDataBase>();
     public static List<HistoryCardDataBase> historyCards = new List<HistoryCardDataBase>();
     public static List<CardInStore> cardInStore = new List<CardInStore>();
     public static PiecesWithCard[] piecesCard = { 
@@ -69,6 +69,7 @@ public static class TransportData
         var result = _cardsDataBase.Where(x => x.title == cardName).FirstOrDefault();
         return result;
     }
+
     public static bool ExistNameInList(string cardName)
     {
         var cards = Resources.LoadAll<CardData>("Cards");
@@ -84,12 +85,14 @@ public static class TransportData
         return false;
     }
 }
+[System.Serializable]
 public class CardDataBase
 {
     public string title = "No name";
     public CardData data;
     public int count = 0;
 }
+[System.Serializable]
 public class HistoryCardDataBase
 {
     public string nameCard;
@@ -106,25 +109,14 @@ public class HistoryCardDataBase
         date = day.ToString() + "/" + month.ToString() +"/" + year.ToString();
     }
 }
+
 [System.Serializable]
-public class SaveCardData
-{
-    [SerializeField]
-    public int currentMoney;
-    [SerializeField]
-        public List<CardDataBase> cardsInPossession = new List<CardDataBase>();
-    [SerializeField]
-    public List<HistoryCardDataBase> historyCards = new List<HistoryCardDataBase>();
-    [SerializeField]
-    public List<CardInStore> cardInStore = new List<CardInStore>();
-    [SerializeField]
-    public PiecesWithCard[] piecesCard;
-}
 public class PiecesWithCard
 {
     private string _namePiece;
     private CardData _cardAssociate;
-
+    public PieceStats stats;
+    
     public PiecesWithCard(int index)
     {
         PieceForIndex(index);
@@ -132,14 +124,44 @@ public class PiecesWithCard
 
     public void PieceForIndex(int index)
     {
-        string[] namePieces = { "pawn", "tower", "knight", "bishop", "queen", "king" };
-        if (index < 0 || index >= namePieces.Length)
+        Piece.PieceType type = (Piece.PieceType)index;
+        _namePiece = type.ToString().ToLower();
+
+        stats = new PieceStats();
+
+        switch (type)
         {
-            Debug.LogError("****** El indice indicado no corresponde a ninguno de la lista.");
+            case Piece.PieceType.PAWN:
+                SetStats(3,1,1,1,.1f,.1f);
+                break;
+            case Piece.PieceType.TOWER:
+                SetStats(1,8,3,.25f,0,.15f);
+                break;
+            case Piece.PieceType.BISHOP:
+                SetStats(4,1,2,.65f,.25f,0);
+                break;
+            case Piece.PieceType.KNIGHT:
+                SetStats(3, 4, 5, .33f, .15f, .35f);
+                break;
+            case Piece.PieceType.QUEEN:
+                SetStats(7,0,1,1.6f,.35f,.35f);
+                break;
+            case Piece.PieceType.KING:
+                SetStats(3, 3, 1, 1, .1f, .65f);
+                break;
+            default:
+                break;
         }
-        else
-            _namePiece = namePieces[index];
     } 
+    private void SetStats(int life, int defense, int atk, float atkSpeed,float critical,float block)
+    {
+        stats.life = life;
+        stats.defense = defense;
+        stats.attack = atk;
+        stats.atkSpeed = atkSpeed;
+        stats.critical = critical;
+        stats.block = block;
+    }
     public string GetPiece()
     {
         return _namePiece;

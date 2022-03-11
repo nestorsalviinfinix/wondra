@@ -13,9 +13,7 @@ public class LivePiece : MonoBehaviour
     public LiveBoardController liveBoard;
     public static NullPiece NullPiece;
 
-    void Start()
-    {
-    }
+
 
     public void SetBox(ChessBoardBox newBox)
     {
@@ -50,7 +48,8 @@ public class LivePiece : MonoBehaviour
         Box = box.chessBox;
         transform.position = liveBoard.boxes[Box.CoordX, box.CoordY].gameObject.transform.position;
         Vector3 pos = transform.position;
-        pos.y += 1;
+        pos.y += .2f;
+        pos.z -= .5f;
         transform.position = pos;
     }
 }

@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WebGL:20</UnityBuildTarget>
     <UnityVersion>2021.2.5f1</UnityVersion>
@@ -56,38 +56,71 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Piece_Scripts\Piece.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\FalseScoreTest.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ButtonFeedBack.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\SaveLoadJsons.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ABChangeColor.cs" />
+    <Compile Include="Assets\Scenes\Game\GameElements\LivePiece.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\ActionMovement.cs" />
+    <Compile Include="Assets\Scripts\Menu\FalseScoreTest.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IObserver.cs" />
+    <Compile Include="Assets\Scripts\Menu\ButtonFeedBack.cs" />
+    <Compile Include="Assets\Scripts\Game\Entities\ChessPlayer.cs" />
+    <Compile Include="Assets\Scripts\Engine\LoadData.cs" />
+    <Compile Include="Assets\Scenes\Game\LiveGameController.cs" />
+    <Compile Include="Assets\Scripts\Menu\SaveLoadJsons.cs" />
+    <Compile Include="Assets\Scenes\Game\GameElements\NullPiece.cs" />
+    <Compile Include="Assets\Scripts\Menu\ABChangeColor.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\TurnPhaseStrategies.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\Decorate\IdleWaitExecute.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\AccountMenu.cs" />
-    <Compile Include="Assets\Scripts\Card_Scripts\CardData.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\BuyMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\TransitionScenes.cs" />
-    <Compile Include="Assets\Scripts\Board_Scripts\BoardCreate.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\Popups.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ZoomCard.cs" />
-    <Compile Include="Assets\Scripts\Board_Scripts\BoardNode.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\SettingsMenu.cs" />
-    <Compile Include="Assets\Scripts\Card_Scripts\CardFilterMenu.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ButtonsAttention.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ArmoryManager.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\ScrollBarForce.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\SearchFilter.cs" />
-    <Compile Include="Assets\Scripts\Card_Scripts\GenerateRandomName.cs" />
-    <Compile Include="Assets\Scripts\Piece_Scripts\PieceTypes.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\HistoryManager.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\SellMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\TransportData.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\HistoryCard.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\Menus.cs" />
-    <Compile Include="Assets\Scripts\Generic_Scripts\ManualSorting.cs" />
-    <Compile Include="Assets\Scripts\Piece_Scripts\PawnMove.cs" />
-    <Compile Include="Assets\Scripts\Menu_Scripts\UserName.cs" />
+    <Compile Include="Assets\Scenes\Game\GameElements\LiveBox.cs" />
+    <Compile Include="Assets\Scenes\Game\UI\TextPossibleMoves.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\ChessGameController.cs" />
+    <Compile Include="Assets\Scripts\Menu\AccountMenu.cs" />
+    <Compile Include="Assets\Scripts\Cards\CardData.cs" />
+    <Compile Include="Assets\Scripts\Menu\BuyMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\ETurnPhase.cs" />
+    <Compile Include="Assets\Scenes\Game\LiveBoardController.cs" />
+    <Compile Include="Assets\Scripts\Menu\TransitionScenes.cs" />
+    <Compile Include="Assets\Scenes\Game\GameElements\NullBox.cs" />
+    <Compile Include="Assets\Scripts\Game\Board\BoardCreate.cs" />
+    <Compile Include="Assets\Scripts\Menu\Popups.cs" />
+    <Compile Include="Assets\Scripts\Menu\ZoomCard.cs" />
+    <Compile Include="Assets\Scripts\Game\Board\BoardNode.cs" />
+    <Compile Include="Assets\Scripts\Menu\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\ITurnPhaseStrategy.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\ChessTurnController.cs" />
+    <Compile Include="Assets\Scripts\Cards\CardFilterMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IPieceMoveStrategy.cs" />
+    <Compile Include="Assets\Scripts\Menu\ButtonsAttention.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\EChessColor.cs" />
+    <Compile Include="Assets\Scripts\Menu\ArmoryManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\PieceMoveStrategies.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\ChessBoardManager.cs" />
+    <Compile Include="Assets\Resources\GameUI\SelectCircle\SelectCircle.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\EActionType.cs" />
+    <Compile Include="Assets\Scenes\Game\UI\TextSelectedPiece.cs" />
+    <Compile Include="Assets\Scripts\Menu\ScrollBarForce.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\ELiveBoardBoxStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\ChessPlayerController.cs" />
+    <Compile Include="Assets\Scenes\Game\LivePieceController.cs" />
+    <Compile Include="Assets\Scripts\Menu\SearchFilter.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IChessPlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\Actions\Action.cs" />
+    <Compile Include="Assets\Scripts\Cards\GenerateRandomName.cs" />
+    <Compile Include="Assets\Scripts\Game\Board\ChessBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\Enums\EChessPieceType.cs" />
+    <Compile Include="Assets\Scripts\Menu\HistoryManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Board\ChessBoardBox.cs" />
+    <Compile Include="Assets\Scripts\Menu\SellMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
+    <Compile Include="Assets\Scripts\Menu\TransportData.cs" />
+    <Compile Include="Assets\Scripts\Piece_Scripts\Piece.cs" />
+    <Compile Include="Assets\Scripts\Menu\HistoryCard.cs" />
+    <Compile Include="Assets\Scripts\Menu\Menus.cs" />
+    <Compile Include="Assets\Scripts\Engine\ManualSorting.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\PawnMove.cs" />
+    <Compile Include="Assets\Scripts\Menu\UserName.cs" />
+    <Compile Include="Assets\Scripts\Game\Piece\ChessPiece.cs" />
     <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
-    <Compile Include="Assets\Scripts\Card_Scripts\OwnerCard.cs" />
+    <Compile Include="Assets\Scripts\Cards\OwnerCard.cs" />
+    <Compile Include="Assets\Scripts\Piece_Scripts\PieceStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -89,7 +89,6 @@ public class LiveBoardController : MonoBehaviour
     public void SelectBox(LiveBox box)
     {
         if (selectedBox == box) return;
-
         // select
         if (box.Status == ELiveBoardBoxStatus.None)
         {
@@ -115,6 +114,14 @@ public class LiveBoardController : MonoBehaviour
         {
             // move piece
             //Debug.Log($"Will move to: {box.ACoords}");
+
+            if(box.piece != LivePiece.NullPiece)
+            {
+                Destroy(box.piece.gameObject);
+                box.piece = LivePiece.NullPiece;
+                Debug.Log("ATTAAAACK!!!!");
+            }
+
 
             EActionType currentActionType = EActionType.Move;
             IAction action = Action.actions[currentActionType];

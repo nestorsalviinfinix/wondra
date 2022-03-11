@@ -21,6 +21,7 @@ public class ChessBoardBox
         ACoordX = Convert.ToChar(coordX + 97);
         ACoordY = coordY + 1;
 
+
         CoordX = coordX;
         CoordY = coordY;
         //Debug.Log($"Created Box {CoordX}{CoordY}");
@@ -28,6 +29,7 @@ public class ChessBoardBox
 
     public void SetPiece(ChessPiece piece)
     {
+
         this.Piece = piece;
 
         if (piece == null) return;

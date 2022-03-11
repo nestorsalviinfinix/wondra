@@ -25,9 +25,4 @@ public class LiveGameController : MonoBehaviour
         pieceController.CreatePieces();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
