@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Game\GameElements\LivePiece.cs" />
     <Compile Include="Assets\Scripts\Game\Piece\Actions\ActionMovement.cs" />
+    <Compile Include="Assets\Scripts\Piece_Scripts\PieceStats.cs" />
     <Compile Include="Assets\Scripts\Menu\FalseScoreTest.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IObserver.cs" />
     <Compile Include="Assets\Scripts\Menu\ButtonFeedBack.cs" />
@@ -67,12 +68,14 @@
     <Compile Include="Assets\Scripts\Menu\SaveLoadJsons.cs" />
     <Compile Include="Assets\Scenes\Game\GameElements\NullPiece.cs" />
     <Compile Include="Assets\Scripts\Menu\ABChangeColor.cs" />
+    <Compile Include="Assets\Scenes\Game\BattleController.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\TurnPhaseStrategies.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\Decorate\IdleWaitExecute.cs" />
     <Compile Include="Assets\Scenes\Game\GameElements\LiveBox.cs" />
     <Compile Include="Assets\Scenes\Game\UI\TextPossibleMoves.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessGameController.cs" />
     <Compile Include="Assets\Scripts\Menu\AccountMenu.cs" />
+    <Compile Include="Assets\Scripts\Piece_Scripts\BattlePiece.cs" />
     <Compile Include="Assets\Scripts\Cards\CardData.cs" />
     <Compile Include="Assets\Scripts\Menu\BuyMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\ETurnPhase.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="Assets\Scripts\Menu\HistoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoardBox.cs" />
     <Compile Include="Assets\Scripts\Menu\SellMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Engine\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IAction.cs" />
     <Compile Include="Assets\Scripts\Menu\TransportData.cs" />
     <Compile Include="Assets\Scripts\Piece_Scripts\Piece.cs" />
@@ -120,7 +124,6 @@
     <Compile Include="Assets\Scripts\Game\Piece\ChessPiece.cs" />
     <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
     <Compile Include="Assets\Scripts\Cards\OwnerCard.cs" />
-    <Compile Include="Assets\Scripts\Piece_Scripts\PieceStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

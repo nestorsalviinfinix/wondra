@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BattleKING
+  m_Controller: {fileID: 9100000, guid: e13fe7095fb366048a7e5f194550633a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9bd1f282dce46244683d764ef3544d55, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6e9c80141ce1e1d4e8edb21a4a37c7d3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bca1dda6feaf3ac439f521250a70776c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 345fd5d7c5d22ad46b50c3e5d3f74ee3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3d46f6b104a630c41b31387ba8c141dd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8f87469278984d940bdb4009926524c4, type: 2}

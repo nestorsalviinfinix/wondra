@@ -75,7 +75,7 @@ public class LivePieceController : MonoBehaviour
 
         newPiece.GetComponent<Animator>().runtimeAnimatorController =
             Resources.Load<RuntimeAnimatorController>(
-                "Animation/PiecesAnims/Board" + FirstBigger(type) + (chessPiece.Color == EChessColor.Black ? "Black" : "")
+                "Animation/PiecesAnims/BoardAnims/Board" + FirstBigger(type) + (chessPiece.Color == EChessColor.Black ? "Black" : "")
                 );
 
         newPiece.name = $"{chessPiece.Color} {chessPiece.Type} in " +

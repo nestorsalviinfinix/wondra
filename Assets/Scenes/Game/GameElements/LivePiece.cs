@@ -22,7 +22,8 @@ public class LivePiece : MonoBehaviour
 
     public List<ChessBoardBox> GetLivePossibleMoves()
     {
-        if (this == LivePiece.NullPiece) return new List<ChessBoardBox>();
+        if (this == LivePiece.NullPiece)
+            return new List<ChessBoardBox>();
         List<ChessBoardBox> moveList = GetChessPiece().GetChessPossibleMoves();
         return moveList;
     }
@@ -30,11 +31,6 @@ public class LivePiece : MonoBehaviour
     public ChessPiece GetChessPiece()
     {
         return Box.Board.boxes[Box.CoordX, Box.CoordY].Piece;
-    }
-
-    void Update()
-    {
-        transform.forward = Camera.main.transform.forward;
     }
 
     internal void ExecuteActionTo(IAction action, LiveBox box)
@@ -51,5 +47,10 @@ public class LivePiece : MonoBehaviour
         pos.y += .2f;
         pos.z -= .5f;
         transform.position = pos;
+    }
+    public void Capture()
+    {
+        //Box.SetPiece(null);
+        Destroy(gameObject);
     }
 }

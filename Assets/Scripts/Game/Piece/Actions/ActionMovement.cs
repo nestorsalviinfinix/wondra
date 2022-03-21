@@ -10,3 +10,12 @@ public class ActionMovement : Action
         originBox.SetPiece(null);
     }
 }
+public class ActionAttack : Action
+{
+    public override void ExecuteAction(ChessBoardBox originBox, ChessBoardBox destinyBox)
+    {
+        destinyBox.SetPiece(originBox.Piece);
+        if (destinyBox != originBox)
+            originBox.SetPiece(null);
+    }
+}

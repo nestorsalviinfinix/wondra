@@ -88,6 +88,8 @@ public class LiveBoardController : MonoBehaviour
 
     public void SelectBox(LiveBox box)
     {
+        Debug.Log("Piece: " + box.piece.name);
+
         if (selectedBox == box) return;
         // select
         if (box.Status == ELiveBoardBoxStatus.None)
@@ -117,19 +119,35 @@ public class LiveBoardController : MonoBehaviour
 
             if(box.piece != LivePiece.NullPiece)
             {
-                Destroy(box.piece.gameObject);
-                box.piece = LivePiece.NullPiece;
+                //Destroy(box.piece.gameObject);
+                //box.piece = LivePiece.NullPiece;
                 Debug.Log("ATTAAAACK!!!!");
+
+                FindObjectOfType<LiveGameController>().InitBattle(true);
+                List<EChessPieceType> whitePieces = new List<EChessPieceType>();
+                List<EChessPieceType> blackPieces = new List<EChessPieceType>();
+                if (box.piece.PieceColor == EChessColor.White)
+                {
+                    whitePieces.Add(box.piece.PieceType);
+                    blackPieces.Add(selectedBox.PieceType);
+                }
+                else
+                {
+                    blackPieces.Add(box.piece.PieceType);
+                    whitePieces.Add(selectedBox.PieceType);
+                }
+                FindObjectOfType<BattleController>().StartBattle(whitePieces,blackPieces,selectedBox.piece,box.piece, selectedBox.piece.PieceColor == EChessColor.White,box);
+            
             }
-
-
-            EActionType currentActionType = EActionType.Move;
-            IAction action = Action.actions[currentActionType];
-            selectedBox.piece.ExecuteActionTo(action, box);
-
-            // #TODO: move this to an event listener after implementing turns
-            selectedBox = LiveBox.NullBox;
-            CleanPossibleMovesIndicators();
+            else
+            {
+                EActionType currentActionType = EActionType.Move;
+                IAction action = Action.actions[currentActionType];
+                selectedBox.piece.ExecuteActionTo(action, box);
+            }
+                selectedBox = LiveBox.NullBox;
+                CleanPossibleMovesIndicators();
         }
+        
     }
 }

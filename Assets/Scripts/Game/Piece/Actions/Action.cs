@@ -9,6 +9,7 @@ public abstract class Action : IAction
     {
         actions = new Dictionary<EActionType, Action>();
         actions.Add(EActionType.Move, new ActionMovement());
+        actions.Add(EActionType.Attack, new ActionAttack());
     }
 
     public abstract void ExecuteAction(ChessBoardBox originBox, ChessBoardBox destinyBox);

@@ -91,8 +91,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Framework\Control\SwitchOnEnumDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Framework\Variables\UnifiedVariableUnitWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Events\GlobalMessageListenerEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Events\EventUnitWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Framework\Variables\Obsolete\VariableUnitWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Events\EventUnitWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Description\UnitAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\Ports\ValuePortDefinitionInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Flow\FlowGraphUnitUISample.cs" />

@@ -314,7 +314,7 @@ public class PawnPossibleMoves : IPieceMoveStrategy
 
         ChessBoardBox candidate = board.boxes[piece.coordX, nextY];
 
-        if (candidate.Piece == null)
+        //if (candidate.Piece == null)
             list.Add(candidate);
 
         return list;
