@@ -136,7 +136,7 @@ public class LiveBoardController : MonoBehaviour
                     blackPieces.Add(box.piece.PieceType);
                     whitePieces.Add(selectedBox.PieceType);
                 }
-                FindObjectOfType<BattleController>().StartBattle(whitePieces,blackPieces,selectedBox.piece,box.piece, selectedBox.piece.PieceColor == EChessColor.White,box);
+                //FindObjectOfType<BattleController>().StartBattle(whitePieces,blackPieces,selectedBox.piece,box.piece, selectedBox.piece.PieceColor == EChessColor.White,box);
             
             }
             else

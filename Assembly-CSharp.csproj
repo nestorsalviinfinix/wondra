@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Cards\CardData.cs" />
     <Compile Include="Assets\Scripts\Menu\BuyMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\ETurnPhase.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Board\BoardBox.cs" />
     <Compile Include="Assets\Scenes\Game\LiveBoardController.cs" />
     <Compile Include="Assets\Scripts\Menu\TransitionScenes.cs" />
     <Compile Include="Assets\Scenes\Game\GameElements\NullBox.cs" />
@@ -90,11 +91,14 @@
     <Compile Include="Assets\Scripts\Game\Interfaces\ITurnPhaseStrategy.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessTurnController.cs" />
     <Compile Include="Assets\Scripts\Cards\CardFilterMenu.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Pieces\CanMoves.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IPieceMoveStrategy.cs" />
     <Compile Include="Assets\Scripts\Menu\ButtonsAttention.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\EChessColor.cs" />
     <Compile Include="Assets\Scripts\Menu\ArmoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Piece\Actions\PieceMoveStrategies.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Board\BoardCreator.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Pieces\IPieceMove.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessBoardManager.cs" />
     <Compile Include="Assets\Resources\GameUI\SelectCircle\SelectCircle.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\EActionType.cs" />
@@ -102,6 +106,7 @@
     <Compile Include="Assets\Scripts\Menu\ScrollBarForce.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\ELiveBoardBoxStatus.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\ChessPlayerController.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Pieces\PieceGame.cs" />
     <Compile Include="Assets\Scenes\Game\LivePieceController.cs" />
     <Compile Include="Assets\Scripts\Menu\SearchFilter.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IChessPlayerManager.cs" />
@@ -109,6 +114,7 @@
     <Compile Include="Assets\Scripts\Cards\GenerateRandomName.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoard.cs" />
     <Compile Include="Assets\Scripts\Game\Enums\EChessPieceType.cs" />
+    <Compile Include="Assets\Scripts\Engine\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Menu\HistoryManager.cs" />
     <Compile Include="Assets\Scripts\Game\Board\ChessBoardBox.cs" />
     <Compile Include="Assets\Scripts\Menu\SellMenuManager.cs" />
@@ -122,6 +128,7 @@
     <Compile Include="Assets\Scripts\Game\Piece\PawnMove.cs" />
     <Compile Include="Assets\Scripts\Menu\UserName.cs" />
     <Compile Include="Assets\Scripts\Game\Piece\ChessPiece.cs" />
+    <Compile Include="Assets\Scripts\ChessGame\Game\SelectBoard.cs" />
     <Compile Include="Assets\Resources\Prefabs\Piece\BasePiece.cs" />
     <Compile Include="Assets\Scripts\Cards\OwnerCard.cs" />
   </ItemGroup>

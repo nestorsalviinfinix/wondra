@@ -17,10 +17,9 @@ public class BattleController : MonoBehaviour
 
     private bool _inBattle = false;
 
-    public LivePiece attacker, defender;
+    public BoardBox attacker, defender;
 
     public bool whiteAttack;
-    public LiveBox box;
     private bool _winAttacker;
 
 
@@ -29,6 +28,8 @@ public class BattleController : MonoBehaviour
         player1Pieces = CreatePieces(player1Slots, EChessColor.White);
         player2Pieces = CreatePieces(player2Slots, EChessColor.Black);
 
+        AudioManager.Instance.PlayMusic("ChessBoard_AmbientMusic_1", .25f);
+
         //List<EChessPieceType> test1 = new List<EChessPieceType>() { EChessPieceType.TOWER,EChessPieceType.BISHOP, EChessPieceType.KING };
         //List<EChessPieceType> test2 = new List<EChessPieceType>() { EChessPieceType.KING, EChessPieceType.KNIGHT, EChessPieceType.KNIGHT };
 
@@ -36,39 +37,35 @@ public class BattleController : MonoBehaviour
     }
 
 
-    public void StartBattle(List<EChessPieceType> player1Soldiers, List<EChessPieceType> player2Soldiers,LivePiece attacker, LivePiece defender, bool whiteAttack,LiveBox box)
+    public void StartBattle(List<EChessPieceType> player1Soldiers, List<EChessPieceType> player2Soldiers,BoardBox attacker, BoardBox defender, bool whiteAttack)
     {
+        this.whiteAttack = whiteAttack;
+        this.attacker = attacker;
+        this.defender = defender;
         SuitPieces(player1Pieces, player1Soldiers);
         SuitPieces(player2Pieces, player2Soldiers);
 
         barWhite.fillAmount = barBlack.fillAmount = 1;
         _inBattle = true;
-        this.attacker = attacker;
-        this.defender = defender;
-        this.whiteAttack = whiteAttack;
-        this.box = box;
     }
     public void EndBattle()
     {
         _inBattle = false;
 
-        EActionType currentActionType = EActionType.Move;
-        IAction action = Action.actions[currentActionType];
-        if (_winAttacker)
-            attacker.ExecuteActionTo(action, box);
-        else
-        {
-            LivePiece piesaNull = new LivePiece();
-            ChessPiece chessNull = new ChessPiece(EChessPieceType.NULL,new ChessPlayer("null",EChessColor.White));
-            box.piece = piesaNull;
-            attacker.Box.SetPiece(chessNull);
-        }
-
         Invoke(nameof(BackToBoard), 4f);
     }
     private void BackToBoard()
     {
-        FindObjectOfType<LiveGameController>().InitBattle(false);
+        if (_winAttacker)
+        {
+            defender.Capture(attacker);
+        }
+        else
+        {
+            attacker.EliminitePiece();
+        }
+
+        FindObjectOfType<SelectBoard>().InitBattle(false); 
     }
     private void Update()
     {
@@ -91,6 +88,15 @@ public class BattleController : MonoBehaviour
                     );
                 pieces[i].GetComponent<BattlePiece>().stats = new PieceStats(soldiers[i]);
                 pieces[i].GetComponent<BattlePiece>().StartBattle();
+                if(whiteAttack)
+                {
+                    if (pieces[i].GetComponent<BattlePiece>().team == EChessColor.White)
+                        pieces[i].GetComponent<BattlePiece>().FirstAttack();
+                }else
+                {
+                    if (pieces[i].GetComponent<BattlePiece>().team == EChessColor.Black)
+                        pieces[i].GetComponent<BattlePiece>().FirstAttack();
+                }
             }
             else
             {
@@ -110,12 +116,10 @@ public class BattleController : MonoBehaviour
             {
                 if(whiteAttack)
                 {
-                    attacker.Capture();
                     _winAttacker = false;
                 }
                 else
                 {
-                  defender.Capture();
                     _winAttacker = true;
                 }
             }
@@ -128,12 +132,10 @@ public class BattleController : MonoBehaviour
             {
                 if (whiteAttack)
                 {
-                    defender.Capture();
                     _winAttacker = true;
                 }    
                 else
                 {
-                    attacker.Capture();
                     _winAttacker = false;
                 }
             }

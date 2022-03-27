@@ -35,12 +35,12 @@ public class SaveLoadJsons : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        //paths.Add("cards", Application.persistentDataPath + "/cards.json");
-        print("CardData: " + Application.persistentDataPath + "/cards.json");
-        if (File.Exists(Application.persistentDataPath + "/cards.json"))
-            StartCoroutine(LoadCards("Cards"));
-        else
-            CreateEmpty();
+        ////paths.Add("cards", Application.persistentDataPath + "/cards.json");
+        //print("CardData: " + Application.persistentDataPath + "/cards.json");
+        //if (File.Exists(Application.persistentDataPath + "/cards.json"))
+        //    StartCoroutine(LoadCards("Cards"));
+        //else
+        //    CreateEmpty();
     }
     public void LoadCards()
     {

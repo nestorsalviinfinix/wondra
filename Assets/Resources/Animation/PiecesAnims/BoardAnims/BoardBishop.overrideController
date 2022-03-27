@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BoardBishop
+  m_Name: BoardBISHOP
   m_Controller: {fileID: 9100000, guid: cf4fae27fb6b02248b9dcc1882457751, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 142b378ca6183534196c619c5e595062, type: 2}
@@ -15,3 +15,5 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: 28897f6ceb8fa64478c6cd916d9aaecc, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: d6d6bd9447765e44d9b3c06f83127f18, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 7a38af79e0239ab43a3363c357470bcb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1fe49ae2d2ce5b84f803348d0d94eceb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b7b3eea5b6eea345869a850afa9a51d, type: 2}

@@ -13,12 +13,12 @@ public class BattlePiece : MonoBehaviour
     public Animator animator;
     public bool amAlive = false;
     public EChessColor team;
+    public EChessPieceType type;
     public BattlePiece enemy;
     public BattleController controller;
     public bool amPrincipal = false;
 
     private float _timeToAttack, _attackRate;
-
 
     void Start()
     {
@@ -31,6 +31,10 @@ public class BattlePiece : MonoBehaviour
         _attackRate = _timeToAttack + Random.Range(-.1f,.1f);
         _maxLife = stats.defense + stats.life;
         animator.Rebind();
+    }
+    public void FirstAttack()
+    {
+        _attackRate = 0;
     }
 
     public void BattleUpdate()
@@ -54,7 +58,6 @@ public class BattlePiece : MonoBehaviour
         if(stats.critical > Random.value)
         {
             damage = stats.attack * 2;
-            Debug.Log(name+" Critical");
         }else
         {
             damage = stats.attack;
@@ -65,7 +68,6 @@ public class BattlePiece : MonoBehaviour
     {
         if(stats.block > Random.value)
         {
-            Debug.Log(name+" BLOCK DAMAGE!!!");
             return;
         }
 

@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BoardTower
+  m_Name: BoardTOWER
   m_Controller: {fileID: 9100000, guid: cf4fae27fb6b02248b9dcc1882457751, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 142b378ca6183534196c619c5e595062, type: 2}
@@ -15,3 +15,5 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: e7abd97fa99a4e74ca708509d0fb0eb3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: d6d6bd9447765e44d9b3c06f83127f18, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: a801382466e8ad4458f613cbe0444d16, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1fe49ae2d2ce5b84f803348d0d94eceb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 38d113fd2970f0c43ab3031c468b84c8, type: 2}

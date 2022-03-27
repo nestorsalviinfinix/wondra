@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BoardQueen
+  m_Name: BoardQUEEN
   m_Controller: {fileID: 9100000, guid: cf4fae27fb6b02248b9dcc1882457751, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 142b378ca6183534196c619c5e595062, type: 2}
@@ -15,3 +15,5 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: 0f8950e17c6e75f499132870cb055481, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: d6d6bd9447765e44d9b3c06f83127f18, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: e99a2e5375fce53449633bc1b8c0fa0d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1fe49ae2d2ce5b84f803348d0d94eceb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b85bb25646cb4ba4184ef6b6c87fd168, type: 2}
